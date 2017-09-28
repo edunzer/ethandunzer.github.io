@@ -1,2 +1,2 @@
 # ethandunzer.github.io
-## Name Ethan DUnzer
+## Name Ethan Dunzer
