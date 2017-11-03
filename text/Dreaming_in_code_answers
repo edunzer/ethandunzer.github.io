@@ -150,32 +150,54 @@ Summarize briefly Linus Torvalds advice about “large projects” give in 2004
 
 Chapter 7
 Ted Leung hired to do what?
+	-test the how chandler could handle large amounts of data
 Donn Denman hired (2004) to do what?
+	-create the detail view
 Briefly describe Hungarian notation
+	-In Hungarian notation, the programmer appends a prefix to every variable name that gives anyone reading the code important clues about what sort of variable it is.
 What does the author state is the “...single most challenging demand of software development.”
+	-Communicating abstractions unambiguously—from programmer to machine, from programmer to programmer, and from program to user
 Brian Kirsch, David Surovell, and Lisa Dusseault joined the effort in what roles?
+	-writing email code, improving widgets on the mac side of chandler, managing the crew of programmers
 Katie Parlante assumes mantle as “architecture coordinator”, what is this?
+	-she would make all the big change descions
 Lisa Dusseault takes on “detailed planning and scheduling of the development work.” Any idea what this is?
+	-she would organize how projects would be completed and started
 
 Chapter 8
 What does “eat your own dogfood” mean?
+	-the phrase means that software developers must themselves use the products they are in the process of building. 
 What happened to the “peer-to-peer” sharing ideal in Chandler? (This is related to the WebDAV discussion.) 
+	-the solution to there problem was never solved and they concluded it was a dead end
 Quote: “When people ask for numbers that far out, the traditional thing that engineers do ....” When discussing the timeline for Chandler, how was the quote above completed?
+	-"is make them up"
 Aparna Kadakia became quality assurance (QA) manager. Sheila Mooney joins Chao Lam on product management writing more formal and detailed specifications.
 As “reality” set in, what happened to Chandlers goals?
+	-they realised that they could not keep up with the demand of ideas into code, they were working from bottom up, instead of top down. 
 Brian Skinner leaves, Stuart Parmenter leaves, Chao Lam leaves, and Ducky Sherwood leaves.
 
 Chapter 9
 After about two years with little to show for it, the author suggests the project had something else important. What?
+	-a long history of what not to do
 Structured programming evolved to address what programming practice?
+	-the central idea was to compose a program as a collection of subunits, each of which had only a single point of entry and a single point of exit.
 Was structured programming a solution to the problem of software development?
+	-it wasnt a solution more a patch to make things more efficent.
 Have any techniques shown to improve the software development process?
+	-
 Give a few software failures the author lists. Did anyone die due to the errors?
+	-
 The “waterfall model” of programming was/is popular. What were some problems with this model?
+	-divided a project into an orderly sequence of discrete phases, like requirements definition, design, implementation, integration, testing, and deployment. One phase would finish before the next began.
 What are the four tenets of Agile Software Development?
+	-individuals and interactions, working software, customer collaboration, responding to change
 What did a 2004 study find about the development practices of some two hundred software team leaders?
+	-The study's authors wrote of "the shock and disappointment we felt at finding that the most dominant practice was none at all—a practice (if it can be called such) reported by a full third of the survey participants." 
 What is the “Joel Test” and what did he say about Microsoft and the Joel Test.
+	-it was a test to see how well your project functioned, "I think Microsoft is now well in the advanced throes of getting everything 100 percent right in terms of the discipline and just no longer producing products people want to buy with any level of consistency,"
 What is Rosenberg’s Law?
+	-Software is easy to make, except when you want it to do something new. And then, of course, there is a corollary: The only software that's worth making is software that does something new
 
 Chapter 10
 Chapter 10 is about the notion of “Software Engineering” and the difficulty of applying this label to the development of software. The author suggests that Yertle the Turtle provides an important lesson for programmers. Describe it.
+	- in which a turtle king climbs atop a turtle tower so he can survey the vast extent of his kingdom. Finally, the lowliest turtle in the stack burps, and down comes the king, along with the rest of the turtles in the pile. The moral of Yertle is—well, there are plenty of morals. For a programmer the lesson might be that stacks of turtles, or layers of abstractions, don't respond well to the failure of even one small part. They are, to use a word that is very popular among the software world's malcontents, brittle. When stressed, they don't bend, they break. 
