@@ -1,80 +1,100 @@
 Chapter 0
 Who wrote “software is hard?” Who is that guy?
--Donald Knuth, he was an author of the most popular and respected programming textbooks
+	-Donald Knuth, he was an author of the most popular and respected programming textbooks
 Programmers start counting at what number?
--0
+	-0
 What was the original sense of a “hacker?”
--obsessive programming tinkerer
+	-obsessive programming tinkerer
 According to a 2002 NIST study what % of software came in significantly late, over budget, or was canceled?
--2 out of 3
+	-2 out of 3
 Who wrote the 1987 essay entitled “No Silver Bullet?”
--Fredrick P. Brooks, Jr.
+	-Fredrick P. Brooks, Jr.
 
 Chapter 1
 What roles in the Chandler project did Michael Toy, John Anderson, Ted Burgess, Mitchell Kapor, and Lou Montulli hold.
--They were all major contributors of the project. 
+	-They were all major contributors of the project. 
 What is “Bugzilla?”
--the active list of bugs that was currently in the program
+	-the active list of bugs that was currently in the program
 What is OSAF?
--open source application foundation
+	-open source application foundation
 What is the projects name?
--chandler
+	-chandler
 What will the software do?
--a social networking planner
+	-a social networking planner
 What is Toy’s keyword for “black hole” bugs?
--These are the bugs that can take forever, there is no time frame for them to be finished
+	-These are the bugs that can take forever, there is no time frame for them to be finished
 What scared Toy so much about Bug 44?
--That they didnt know how long it would take to fix
+	-That they didnt know how long it would take to fix
 What did Toy refer to as a “snake?”
--
+	-
 In the software world, what does “slippage” mean?
--when a group/project is going away from there schedule. 
+	-when a group/project is going away from there schedule. 
 Fredrick Brooks was a programming manager for what software project?
--Lotus 123
+	-Lotus 123
 What is Brooks's Law?
--it exsplains why adding people to a project makes the project completeion time longer. 
+	-it exsplains why adding people to a project makes the project completeion time longer. 
 Brooks found what % of project time was spent writing code?
--
+	-
 Brooks found what % of project time was for testing and fixing bugs?
+	-
 Brooks observed that the unit of effort named “man-month” only applied under what conditions?
--when all the programmers where working together, and they had to continue to add more programmers to the group. 
+	-when all the programmers where working together, and they had to continue to add more programmers to the group. 
 What is the difference between source code and the program you install (.exe) on your computer?
--source code alows you to see and alter what the code does, programs have complressed and locked code that you can not read or alter.
+	-source code alows you to see and alter what the code does, programs have complressed and locked code that you can not read or alter.
 What is the one “article of faith” that all “open source” or “free” software advocates share?
--that open source apps haave a better chance of becoming something great becuase they have so many minds working on the project. 
+	-that open source apps haave a better chance of becoming something great becuase they have so many minds working on the project. 
 What is the difference between a “good” programmer and a “great” programmer?
--good ones can write ccode that works but great ones can write it in way that everyone understands and knows. 
+	-good ones can write ccode that works but great ones can write it in way that everyone understands and knows. 
 Eric Raymond’s book “The Cathedral and the Bazaar” made a distinction between two important project development ideas, briefly contrast them.
+	-	
 Has “open source” software project development refuted Brooks’s “mythical man-month” concerns?
--i think it does in the sence that having alot of new people on a project slows it down. but you can agrue that not everyone is working together in a open source project.
+	-i think it does in the sence that having alot of new people on a project slows it down. but you can agrue that not everyone is working together in a open source project.
 What was Andy Hertzfeld’s input when the Chandler project appeared to have stalled?
--
+	-
    
 Chapter 2
 What was the lifetime as a supported product, of Lotus 123? When did Kapor walk away from it? Why did he walk away from it?
+	-kapor left lotus in july 1986, saying "extricating myself from my own success
 What does it mean for a program to “fork?”
+	-to respond to technical disagreements by splitting into rival camps
 Linus Torvalds used a “science” and “witchcraft” analogy referring to software, explain.
+	-In witchcraft, somebody had a small secret and guarded it—but never allowed others to really understand it and build on it.Traditional software is like witchcraft. 
 Who, where, when demonstrated one of the first PIM software programs?
+	- 
 People often refer to starting their computer as “booting” their computer. What was the origin of this term?
+	-The builders of early computer systems had borrowed the term from the concept of pulling one's self up by thebootstraps to describe the paradox of getting a computer up and running.
 Where was the graphical user interface (GUI) developed?
+	-Xerox's Palo Alto Research Center
 List three software project “train wrecks.”
+	-Advanced Automation System
 What software crisis? Scan this article, what does it suggest? 
-http://www.drdobbs.com/architecture-and-design/the-non-existent-software-crisis-debunki/240165910
+	-that despite everyone saying that projects are becoming harder and harder to finish its not a big deal. nothing major is going to happen because people give up to save money. 
 Scan down this article to the two conclusions (about eight paragraphs down). With two sentences, what is your take away from this?
-http://scribblethink.org/Work/Softestim/softestim.html
+	http://scribblethink.org/Work/Softestim/softestim.html
 
 Chapter 3
 Keep track of team members: 2001 --> Mitch Kapor, Morgen Sagen, Al Cho, Andy Hertzfeld
+	-
 When introducing a new technology or design, why did Frederick Brooks advise “plan to throw one away?”
+	-becuase you almost certainly wont get it right the first time. 
 2002, Katie Parlante joined Chandler. When she first joined what did she do?
+	-she researched user behavior patterns
 John Anderson joined Chandler as “systems architect.” Briefly, what did that mean?
-What is a “core” dump? Why the use of the word core?
+	-title meant that he held chief responsibility for choosing the building blocks that the programmers would use to create their software
+What is a “core” dump? Why the use of the word core? 
+	-the computer drops everything, grinds to a halt, and spits out a file reporting the exact contents of its memory at the moment of failure, offering bug hunters a heap of clues to dig through. were built out of wound wire coils known as ferrite cores.
 How did Erik Sink, speaking of abstractions, describe what programmers do?
+	-"We build piles of abstractions. We design our own abstractions and then pile them up on top of layers we got from somebody else." And every year the piles grow higher. 
 Rather than writing program statements in binary code, 110101110  1001101111, programmers developed a shorthand language called what?
+	-over the wire
 Adding layers of abstraction, new programming languages were created: Lisp, Cobol, Algol, Basic. Fortran was the first widely used. What kind of program converted Fortran to binary?
+	-interpreter
 What are the implications behind: “...there is no Moore’s Law for software. Chips may double in capacity every year or two; our brains don’t.”?
+	-the idea is that at some point humans will no longer be able to understand the complexity of a chip, computer will have to be used to build other computers. 
 The language selected for Chandler was Python. What does it mean that Python was an interpreted language?
+	- interpreted languages perform that translation when you run the program
 The announcement of Chandler occurred when? (Interesting Paper) Slashdot page from 2002.
+	-2003
 
 Chapter 4
 More programmers join the Chandler team...
@@ -86,30 +106,47 @@ Michael Toy: Programming team manager
 Andi Vajda: OSAF’s repository developer
 Brian Skinner (volunteer)
 What do “front ends” and “back ends” mean to software developers?
+	-You, the user, are in front, and the front end is the part of the program that deals with you—that offers windows and dialogues and mouse pointers, tells you what's happening, and provides ways for you to input and output information. The back end is where the results of front-end events and inputs go so that the computer can make sense of them, save them, and retrieve them. 
 The terms RAP, SQL, object persistence, all relate to a problem Chandler’s developers needed to solve at the earliest stage. What was the problem?
 What did the Lego Hypothesis refer to?
+	-"In the future, programs will be built out of reusable parts. Software parts will be available worldwide. Software engineering will be set 
+free from the mundane necessity of programming." 
 Give one reason why the Lego Hypothesis seems to not work so well.
+	-well considereing that we are there in many ways already, it think its obvious that something new is going to come up and you have to make something new. 
 How many “modules” does CPAN currently host?
+	-8107
 After Chandler was announced in Oct. 2002, when was the first public release?
+	-April 21, 2003, at 3:07 P.M. 
 
 Chapter 5
 What is the three-way trade-off that many software projects struggle to overcome.
+	-you program can be 2 out of 3, fast cheap good, fast cheap, fast good, cheap good
 Michael Toy: Software development manager, does what?
+	-programming team manager
 What is the more recent definition of “geek?”
+	-"Geek: A person who has chosen concentration rather than conformity; one who pursues skill (especiallytechnical skill) and imagination, not mainstream social acceptance." 
 Kaitlin “Ducky” Sherwood: Help with Chandler’s approach to email, organize project documentation. Important?
+	-yes very
 What does “refactoring” mean to programmers?
+-means rewriting a chink of code to make it breifer, clearer, and easier to read without changing the core functionality
 “In software management, coordination is not an afterthought or an ancillary matter; is the....” Finish the sentence.
+	-it is the heart of the work, and deciding what tools and methods to use can make or break a project. 
 What is “yak-shaving?”
+	-seemingly pointless activity which is actually necessar to solve a problem which solves a problem which, serveral levels of recursion later, solves the real problem you're working on. 
 
 Chapter 6
 What is term “edge cases” referring to in software development?
+	-sooner or later someone will end up making every possible unlikely choice that the software allows.
 What did M. Kapor argue that software design was? (One sentence.)
+	-its not simply a matter of hanging attractive graphics atop the programmers' code. It was the fundamental creative act of imagining the user's needs and devising structures in software to fulfill those needs.
 Montulli and Totic leave the project
 Heikki Toivonen, Stuart Parmenter, and Mimi Yin are hired to do what?
+	-chandlers security
 Andy Hertzfeld leaves
 Michael Toy leaves
 Mitch Kapor takes over overall management of development
 Summarize briefly Linus Torvalds advice about “large projects” give in 2004
+	-there are always going to be failures and problems that take to long, the best thing to do is not get bogged down and think you will never finsih what you started. 
 
 Chapter 7
 Ted Leung hired to do what?
