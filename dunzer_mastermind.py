@@ -3,7 +3,6 @@
 
 import random
 
-
 instructions = """
 === The Mastermind game ===
 
