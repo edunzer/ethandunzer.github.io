@@ -36,6 +36,7 @@ var wallWidth = 80;
 var wallColors;
 var walls = [];
 
+
 /********* SETUP BLOCK *********/
 
 function setup() {
@@ -45,9 +46,9 @@ function setup() {
   ballY=height/5;
   smooth();
 
-  ballColor = color(0);
+  ballColor = color(226, 224, 81);
   racketColor = color(0);
-  wallColors = color(44, 62, 80)
+  wallColors = color(90, 181, 74)
 }
 
 
@@ -68,9 +69,9 @@ function draw() {
 /********* SCREEN CONTENTS *********/
 
 function initScreen() {
-  background(236, 240, 241);
+  background(114, 114, 114);
   textAlign(CENTER);
-  fill(52, 73, 94);
+  fill('white');
   textSize(70);
   text("Bouncy Pong", width/2, height/2);
   text("by edunzer",width/2, height/1.5);
@@ -92,9 +93,9 @@ function gameplayScreen() {
   wallHandler();
 }
 function gameOverScreen() {
-  background(44, 62, 80);
+  background(114, 114, 114);
   textAlign(CENTER);
-  fill(236, 240, 241);
+  fill('white');
   textSize(12);
   text("Your Score", width/2, height/2 - 120);
   textSize(130);
@@ -102,7 +103,6 @@ function gameOverScreen() {
   textSize(15);
   text("Click to Restart", width/2, height-30);
 }
-
 
 /********* INPUTS *********/
 
