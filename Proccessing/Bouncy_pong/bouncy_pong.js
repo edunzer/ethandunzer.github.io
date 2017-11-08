@@ -80,7 +80,7 @@ function initScreen() {
   
 }
 function gameplayScreen() {
-  background(236, 240, 241);
+  background(96, 208, 242);
   drawRacket();
   watchRacketBounce();
   drawBall();
@@ -233,7 +233,7 @@ function watchWallCollision(index) {
 
 function drawHealthBar() {
   noStroke();
-  fill(189, 195, 199);
+  fill(96, 208, 242);
   rectMode(CORNER);
   rect(ballX-(healthBarWidth/2), ballY - 30, healthBarWidth, 5);
   if (health > 60) {
