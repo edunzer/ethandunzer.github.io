@@ -2,31 +2,31 @@
 
 var gameScreen = 0;
 
-// gameplay settings
+// game settings
 var gravity = 0.3;
 var airfriction = 0.00001;
 var friction = 0.1;
 
-// scoring
+// scores system
 var score = 0;
 var maxHealth = 100;
 var health = 100;
 var healthDecrease = 1;
 var healthBarWidth = 60;
 
-// ball settings
+// ball
 var ballX, ballY;
 var ballSpeedVert = 0;
 var ballSpeedHorizon = 0;
 var ballSize = 20;
 var ballColor;
 
-// racket settings
+// racket/bar
 var racketColor;
 var racketWidth = 100;
 var racketHeight = 10;
 
-// wall settings
+// wall
 var wallSpeed = 5;
 var wallInterval = 1000;
 var lastAddTime = 0;
@@ -54,7 +54,7 @@ function setup() {
 /********* DRAW BLOCK *********/
 
 function draw() {
-  // Display the contents of the current screen
+
   if (gameScreen == 0) { 
     initScreen();
   } else if (gameScreen == 1) { 
@@ -107,7 +107,7 @@ function gameOverScreen() {
 /********* INPUTS *********/
 
 function mousePressed() {
-  // if we are on the initial screen when clicked, start the game 
+
   if (gameScreen==0) { 
     startGame();
   }
@@ -118,8 +118,7 @@ function mousePressed() {
 
 
 /********* OTHER FUNCTIONS *********/
-
-// This method sets the necessery variables to start the game  
+ 
 function startGame() {
   gameScreen=1;
 }
@@ -151,7 +150,7 @@ function wallAdder() {
   if (millis()-lastAddTime > wallInterval) {
     var randHeight = round(random(minGapHeight, maxGapHeight));
     var randY = round(random(0, height-randHeight));
-    // {gapWallX, gapWallY, gapWallWidth, gapWallHeight, scored}
+    
     var randWall = [width, randY, wallWidth, randHeight, 0]; 
     walls.push(randWall);
     lastAddTime = millis();
@@ -167,12 +166,12 @@ function wallHandler() {
 }
 function wallDrawer(index) {
   var wall = walls[index];
-  // get gap wall settings 
+  
   var gapWallX = wall[0];
   var gapWallY = wall[1];
   var gapWallWidth = wall[2];
   var gapWallHeight = wall[3];
-  // draw actual walls
+  
   rectMode(CORNER);
   noStroke();
   strokeCap(ROUND);
@@ -193,7 +192,7 @@ function wallRemover(index) {
 
 function watchWallCollision(index) {
   var wall = walls[index];
-  // get gap wall settings 
+  
   var gapWallX = wall[0];
   var gapWallY = wall[1];
   var gapWallWidth = wall[2];
