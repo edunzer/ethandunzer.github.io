@@ -233,7 +233,7 @@ function watchWallCollision(index) {
 
 function drawHealthBar() {
   noStroke();
-  fill(96, 208, 242);
+  fill(139, 206, 239);
   rectMode(CORNER);
   rect(ballX-(healthBarWidth/2), ballY - 30, healthBarWidth, 5);
   if (health > 60) {
