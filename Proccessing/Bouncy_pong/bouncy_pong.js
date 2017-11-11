@@ -328,3 +328,5 @@ function keepInScreen() {
     makeBounceRight(width);
   }
 }
+
+// created by EDUNZER 11/1/17
