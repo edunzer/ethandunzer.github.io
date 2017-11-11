@@ -1,5 +1,4 @@
-/********* VARIABLES *********/
-
+// VARIABLES
 var gameScreen = 0;
 
 // game settings
@@ -37,8 +36,7 @@ var wallColors;
 var walls = [];
 
 
-/********* SETUP BLOCK *********/
-
+// SETUP 
 function setup() {
   createCanvas(500, 500);
   // set the initial coordinates of the ball
@@ -52,8 +50,7 @@ function setup() {
 }
 
 
-/********* DRAW BLOCK *********/
-
+//DRAW BLOCK 
 function draw() {
 
   if (gameScreen == 0) { 
@@ -66,8 +63,7 @@ function draw() {
 }
 
 
-/********* SCREEN CONTENTS *********/
-
+//SCREEN CONTENTS
 function initScreen() {
   background(114, 114, 114);
   textAlign(CENTER);
@@ -104,8 +100,7 @@ function gameOverScreen() {
   text("Click to Restart", width/2, height-30);
 }
 
-/********* INPUTS *********/
-
+// USER INPUT 
 function mousePressed() {
 
   if (gameScreen==0) { 
@@ -117,8 +112,7 @@ function mousePressed() {
 }
 
 
-/********* OTHER FUNCTIONS *********/
- 
+// OTHER 
 function startGame() {
   gameScreen=1;
 }
