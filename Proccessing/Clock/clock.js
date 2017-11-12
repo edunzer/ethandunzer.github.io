@@ -14,7 +14,7 @@
  var middleArc = canvasX - 120
  var outsideArc = canvasX - 140
 
- var secondHand = canvasX * .3
+ var secondHand = canvasX * .25
  var minuteHand = canvasX * .2
  var hourHand = canvasX * .15
 
