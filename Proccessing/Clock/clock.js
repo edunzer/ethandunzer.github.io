@@ -1,7 +1,7 @@
  var canvasX = 400
  var canvasY = 400
 
-// for every 10 px change the ratio for arc and had 
+// for every 10 px change of the canvas the ratio for arc and hand have to change
 
 
 //window setup
