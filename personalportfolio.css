@@ -138,10 +138,16 @@ img {
   display: block;
   font-size: 2.2rem;
   padding: 2rem;
+  transform: translateX(0);
+  transition: transform 0.8s ease-out;
 }
 
 .nav-list a:hover {
-  background: var(--main-blue);
+  background: var(--main-gray);
+  border-radius: 5px;
+    
+  transform: translateY(8px);
+  transition: transform 0.28s ease-in;
 }
 
 /* Welcome section */
