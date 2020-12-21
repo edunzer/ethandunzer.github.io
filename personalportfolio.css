@@ -201,7 +201,7 @@ img {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 4rem;
+  grid-gap: 6rem;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
@@ -241,7 +241,7 @@ img {
 
 .project-title {
   font-size: 2rem;
-  padding: 2rem 0.5rem;
+  padding: 2.5rem 0.5rem;
 }
 
 .btn {
