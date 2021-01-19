@@ -143,9 +143,9 @@ img {
 }
 
 .nav-list a:hover {
-  border-radius: 5px;
-    
-  transform: translateY(6px);
+  border-radius: 5px; 
+  color: dimgray;
+  transform: translateY(4px) translateX(-2px);
   transition: transform 0.28s ease-in;
 }
 
