@@ -143,10 +143,9 @@ img {
 }
 
 .nav-list a:hover {
-  background: var(--main-gray);
   border-radius: 5px;
     
-  transform: translateY(8px);
+  transform: translateY(6px);
   transition: transform 0.28s ease-in;
 }
 
