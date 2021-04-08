@@ -1,55 +1,49 @@
 <!DOCTYPE html>
+<html lang="en" >
 
 <head>
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBRXLMNTWS"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-TBRXLMNTWS');
-    </script>
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" rel="stylesheet"/>
-    <link href="personalportfolio.css" rel="stylesheet"/>
-    <link rel="icon" type="image/png" href="https://img.icons8.com/ios-filled/50/000000/circled-e.png"/>
-
+  <meta charset="UTF-8">
+  <title>Simple Responsive Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="personalportfolio.css" rel="stylesheet"/>
+  <link rel="icon" type="image/png" href="https://img.icons8.com/ios-filled/50/000000/circled-e.png"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" rel="stylesheet"/>
 </head>
-    
+
 <!-- START NAV -->
 
     <nav id="navbar" class="nav">
       <ul class="nav-list">
         <li>
-          <a href="#welcome-section">About</a>
+          <a href="#projects">Projects</a>
         </li>
-        <li>
-          <a href="#projects">Work</a>
-        </li>
+
         <li>
           <a href="#contact">Contact</a>
+        </li>
+
+        <li>
+          <a href="resume.html">Resume</a>
         </li>
       </ul>
     </nav>
 
 <!-- END NAV -->
 
-<!-- START WELCOME SECTION -->
-
-    <section id="welcome-section" class="welcome-section">
+<body>
+<!-- HEADER -->
+<section class="hero" id="welcome-section">
+  <div class="content">
+    <div class="header">
       <h1>Hey I am Ethan</h1>
-      <p>a student at Oregon Tech</p>
-        <div class="welcome-section-secondary">
-            <p>Looking to work in Email Marketing, Marketing Operations or Web Development</p>
-        </div>
-    </section>
-
-<!-- END WELCOME SECTION -->
-
+      <div class="sub-header">
+        <h2>Welcome!</h2>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- START PROJECTS SECTION -->
 
@@ -142,4 +136,9 @@
     </footer>
 
 <!-- END FOOTER SECTION -->
+
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script  src="script.js"></script>
+
+</body>
 </html>

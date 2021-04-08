@@ -2,7 +2,7 @@
 :root {
   --main-white: #f0f0f0;
   --main-red: #63B0CD;
-  --main-blue: #9B9B93;
+  --main-blue: #747474;
   --main-gray: #303841;
 }
 
@@ -143,7 +143,7 @@ img {
 }
 
 .nav-list a:hover {
-  border-radius: 5px; 
+  border-radius: 5px;
   color: dimgray;
   transform: translateY(4px) translateX(-2px);
   transition: transform 0.28s ease-in;
