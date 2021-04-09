@@ -4,6 +4,20 @@ $( document ).ready(function() {
     var $developmentWrapper = $('.development-wrapper');
     var developmentIsVisible = false;
 
+  /* ####### HEADER SECTION ####### */
+
+  $('.menu_icon-nav').click(function(){
+    $(this).addClass('hidden-icon');
+    $('.close_icon').removeClass('hidden-icon');
+    $('.header-nav').addClass('active');
+  });
+
+  $('.close_icon').click(function(){
+    $(this).addClass('hidden-icon');
+    $('.menu_icon-nav').removeClass('hidden-icon');
+    $('.header-nav').removeClass('active');
+  });
+
 
   /* ####### HERO SECTION ####### */
 
@@ -21,6 +35,8 @@ $( document ).ready(function() {
   document.querySelector('.hello').scrollIntoView({
     behavior: 'smooth'
   });
+
+  /* ####### SMOOTH SCROLL SECTION ####### */
 
   // move section down one
   $(document).on("click", "#moveDown", function () {
