@@ -1,44 +1,44 @@
-$( document ).ready(function() {
-  // Main variables
-    var $aboutTitle = $('.about-myself .content h2');
-    var $developmentWrapper = $('.development-wrapper');
-    var developmentIsVisible = false;
-
-  /* ####### HEADER SECTION ####### */
-
-  $('.menu_icon-nav').click(function(){
-    $(this).addClass('hidden-icon');
-    $('.close_icon').removeClass('hidden-icon');
-    $('.header-nav').addClass('active');
-  });
-
-  $('.close_icon').click(function(){
-    $(this).addClass('hidden-icon');
-    $('.menu_icon-nav').removeClass('hidden-icon');
-    $('.header-nav').removeClass('active');
-  });
+$('#navigation a').on('click', function(e) {
+  e.preventDefault();
+  var hash = this.hash;
+  $('html, body').animate({
+    scrollTop: $(this.hash).offset().top
+  }, 1000);
+});
 
 
-  /* ####### HERO SECTION ####### */
+$('.toggler, .nav-content a:not(#dropdown-link)').on('click', function(){
+  $('.toggler').toggleClass('change');
+  $('.nav-content').slideToggle();
+  $('#dropdown-menu').slideUp();
+  $('.menu-overlay').toggle();
+});
 
-  $('.hero .content .header').delay(500).animate({
-    'opacity':'1',
-    'top': '50%'
-  },1000);
+$('.nav-content .dropdown').on('click', function(){
+  $('#dropdown-menu').slideToggle();
+});
 
-  $('.hero .content .header .sub-header').delay(1600).animate({
-    'opacity':'1',
-    'top': '150%'
-  },1000);
+$('.menu-overlay').on('click', function(){
+  $('.toggler').removeClass('change');
+  $('.nav-content').slideUp();
+  $('#dropdown-menu').slideUp();
+  $('.menu-overlay').hide();
+});
 
-  // Scroll to a certain element
-  document.querySelector('.hello').scrollIntoView({
-    behavior: 'smooth'
-  });
+$("#contact input, #contact textarea").on('focusout', function(){
 
-  /* ####### SMOOTH SCROLL SECTION ####### */
+  var text_val = $(this).val();
+  if (text_val === "") {
+    $(this).removeClass('has-value');
+  } else {
+    $(this).addClass('has-value');
+  }
 
-  // move section down one
+});
+
+
+
+// move section down one
   $(document).on("click", "#moveDown", function () {
     $.fn.fullpage.moveSectionDown();
   });
@@ -68,61 +68,3 @@ $( document ).ready(function() {
         } // End if
       });
     });
-
-
-
-  $(window).scroll( function(){
-
-    var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-    /* ##### ABOUT MYSELF SECTION #### */
-    if( bottom_of_window > ($aboutTitle.offset().top + $aboutTitle.outerHeight())){
-      $('.about-myself .content h2').addClass('aboutTitleVisible');
-    }
-  /* ##### EXPERIENCE SECTION #### */
-
-      // Check the location of each element hidden */
-      $('.experience .content .hidden').each( function(i){
-
-          var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-
-          /* If the object is completely visible in the window, fadeIn it */
-          if( bottom_of_window > bottom_of_object ){
-
-            $(this).animate({
-              'opacity':'1',
-              'margin-left': '0'
-            },600);
-          }
-      });
-
-  /*###### SKILLS SECTION ######*/
-
-    var middle_of_developmentWrapper = $developmentWrapper.offset().top + $developmentWrapper.outerHeight()/2;
-
-    if((bottom_of_window > middle_of_developmentWrapper)&& (developmentIsVisible == false)){
-
-      $('.skills-bar-container li').each( function(){
-
-        var $barContainer = $(this).find('.bar-container');
-        var dataPercent = parseInt($barContainer.data('percent'));
-        var elem = $(this).find('.progressbar');
-        var percent = $(this).find('.percent');
-        var width = 0;
-
-        var id = setInterval(frame, 15);
-
-        function frame() {
-          if (width >= dataPercent) {
-              clearInterval(id);
-          } else {
-            width++;
-            elem.css("width", width+"%");
-            percent.html(width+" %");
-          }
-        }
-      });
-      developmentIsVisible = true;
-    }
-  }); // -- End window scroll --
-});
