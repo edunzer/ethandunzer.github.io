@@ -34,12 +34,12 @@ p, span, a{
 
     /* Handle */
     ::-webkit-scrollbar-thumb {
-        background: #11ABB0;
+        background: #4d963c;
     }
 
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
-        background: #159296;
+        background: #4d963c;
     }
 
 
@@ -66,7 +66,7 @@ p, span, a{
 /* Scroll down indicator (bouncing) */
 
 .fa-chevron-down {
-  color: #80dfff !important;
+  color: #4d963c !important;
   /*bottom: 10px;*/
   /*top: 700px;*/
 	/*margin-left: -290px;*/
@@ -148,7 +148,7 @@ p, span, a{
 
 #header{
 	min-height: 100vh;
-	background-image: url(https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/99995378/original/76c3b1e4fb83fc857ea8c221a21b44d9f1fd7434/graphic-design-portraits-landscapes.png);
+	background-image: url(https://i.pinimg.com/originals/aa/43/7a/aa437ad0a3405b944c2999b57209835d.jpg);
     background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -202,7 +202,7 @@ p, span, a{
 }
 
 .nav-content > li > a:hover, .active{
-    color: #11ABB0 !important;
+    color: #4d963c !important;
 }
 
 .toggler{
@@ -262,7 +262,7 @@ p, span, a{
 }
 
 #header .dropdown-item:hover, #header .dropdown-item.active{
-	color: #11ABB0;
+	color: #4d963c;
 	background: transparent !important;
 }
 
@@ -274,18 +274,18 @@ p, span, a{
 
 #header h1{
 	font-size: 80px;
-	color: #F5F5F5;
+	color: #646669;
 }
 
 #header hr{
 	width: 200px;
-	border-color: #F5F5F5;
+	border-color: #646669;
 }
 
 #header h4{
 	font-size: 20px;
 	font-weight: normal;
-	color: #F5F5F5;
+	color: #646669;
 }
 
 
@@ -340,7 +340,7 @@ p, span, a{
 }
 
 #cv .row h3{
-	border-bottom: 3px solid #11ABB0;
+	border-bottom: 3px solid #4d963c;
 	font-size: 24px;
 	padding-bottom: 5px;
     width: min-content;
@@ -361,7 +361,7 @@ p, span, a{
 }
 
 .skills > h4{
-    color: #11ABB0;
+    color: #4d963c;
     margin-bottom: 40px;
 }
 
@@ -380,8 +380,9 @@ p, span, a{
 }
 
 #cv .skill-item .progress-bar{
-	background: #222;
+	background: #2B2B2B;
 }
+
 
 .exp + .exp{
     margin-top: 60px;
@@ -389,7 +390,7 @@ p, span, a{
 }
 
 .exp > h4{
-    color: #11ABB0;
+    color: #4d963c;
     margin-bottom: 40px;
 }
 
@@ -403,7 +404,7 @@ p, span, a{
 }
 
 #cv .box h6{
-	color: #11ABB0;
+	color: #4d963c;
 }
 
 #cv .box p{
@@ -502,172 +503,23 @@ p, span, a{
 }
 
 #contact div.left > span{
-    font-size: 80px;
-    color: #11ABB0;
+    font-size: 40px;
+    color: #4d963c;
     line-height: 0;
+
 }
 
 #contact h4{
     display: inline-block;
     padding-bottom: 5px;
-    border-bottom: 2px solid #11ABB0;
-    text-align: left;
+    border-bottom: 2px solid #4d963c;
+    text-align: right;
     text-transform: uppercase;
     color: #F5F5F5;
     font-size: 25px;
 }
 
-#form{
-    width: 100%;
-    margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-}
 
-#form > div {
-    position: relative;
-    margin-top: 30px;
-}
-
-.firstname, .lastname, .email, .tel{
-    width: 45%;
-}
-
-.subject, .msg{
-    width: 100%;
-}
-
-.btn-div{
-	min-width: 30%;
-    max-width: 50%;
-    padding: 0;
-}
-
-#contact input, textarea{
-    text-align: left;
-    background: transparent !important;
-    border-width: 0 0 1px 0 !important;
-    border-color: #DDD;
-    display: block;
-    width: 100%;
-    padding: 0 12px 6px 0;
-    font-size: 14px;
-    color: #F3F3F3;
-    margin-top: 20px !important;
-    height: 35px;
-    font-family: "Raleway", sans-serif !important;
-}
-
-#contact input:focus, #contact textarea:focus{
-    outline: none;
-}
-
-.focus-border{
-    position: absolute;
-    display: block;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #11ABB0;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-}
-
-input:focus ~ .focus-border, textarea:focus ~ .focus-border{
-    width: 100%;
-}
-
-#contact textarea{
-    resize: vertical;
-    overflow-y: auto;
-    min-height: 100px;
-    max-height: 200px;
-}
-
-#contact .btn-send{
-    width: 100%;
-    cursor: pointer;
-    margin-top: 20px;
-    background: transparent;
-    border-color: #F3F3F3;
-    color: #F3F3F3;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-#contact .btn-send:hover, #contact .btn-send:focus{
-    color: #333;
-    background:#F3F3F3;
-}
-
-#contact .btn-send:focus{
-    outline: none;
-}
-
-#contact .btn-send .fa{
-    margin-right: 10px;
-}
-
-.label{
-    -webkit-transition: .4s ease all;
-    transition: .4s ease all;
-    position: absolute;
-    top: 25px !important;
-    color: #AAA;
-    text-align: left;
-    font-size: 16px;
-    display: block;
-    cursor: text;
-    font-family: "Raleway", sans-serif;
-}
-
-input:focus ~ .label, textarea:focus ~ .label[for=message], input.has-value ~ .label, textarea.has-value ~ .label[for=message]{
-    font-size: 12px !important;
-    top: 0px !important;
-    color: #11ABB0 !important;
-}
-
-
-.input-info{
-    width: 100%;
-    color: #11ABB0;
-    text-align: left;
-}
-
-@media (max-width: 768px){
-
-    #contact .left{
-        display: none;
-    }
-
-    #contact .row{
-    	margin: auto;
-    	width: 90%;
-    }
-
-    #form{
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-    }
-
-    .firstname, .lastname, .email, .tel, .btn-div{
-        width: 100%;
-    }
-
-}
 
 
 

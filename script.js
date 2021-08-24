@@ -37,7 +37,6 @@ $("#contact input, #contact textarea").on('focusout', function(){
 });
 
 
-
 // move section down one
   $(document).on("click", "#moveDown", function () {
     $.fn.fullpage.moveSectionDown();
