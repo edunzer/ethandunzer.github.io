@@ -149,13 +149,13 @@ p, span, a{
 #header{
 	min-height: 100vh;
 	background-image: url(https://i.pinimg.com/originals/aa/43/7a/aa437ad0a3405b944c2999b57209835d.jpg);
-    background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .menu-overlay{
@@ -499,14 +499,17 @@ p, span, a{
     background: #191919;
     color: #F3F3F3;
     text-align: center;
-    padding: 80px 0 100px 0;
+    padding: 330px 0 330px 0;
 }
 
-#contact div.left > span{
-    font-size: 40px;
+#contact div.left > a{
+    font-size: 20px;
     color: #4d963c;
     line-height: 0;
+}
 
+#second-arrow {
+	padding-top: 150px;
 }
 
 #contact h4{
@@ -516,7 +519,7 @@ p, span, a{
     text-align: right;
     text-transform: uppercase;
     color: #F5F5F5;
-    font-size: 25px;
+    font-size: 45px;
 }
 
 
@@ -529,13 +532,14 @@ p, span, a{
 /*  F O O T E R  */
 
 footer{
-    background: #0F0F0F;
+    background: #212121;
     position: relative;
-    padding: 80px;
+    padding: 10px 0 10px 0;
 }
 
 .footer-content{
     text-align: center;
+		padding: 50px 10px 10px 15px;
     max-width: 85%;
     margin: auto;
     display: -webkit-box;
@@ -553,6 +557,11 @@ footer{
 .footer-content p{
     color: #565656;
 }
+
+.footer-content p:hover{
+    color: #FFF;
+}
+
 
 .footer-content a{
     display: inline-block;
@@ -572,10 +581,10 @@ footer{
 }
 
 footer h4{
-    color: #DDD;
+    color: #4d963c;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-size: 18px;
 }
 
@@ -604,4 +613,18 @@ footer h4{
     .footer-content a + a{
         margin-left: 18px;
     }
+}
+
+.bottom-footer {
+	width: inherit;
+}
+
+
+.bottom-footer p{
+	border-top: 2px solid #4d963c;
+	color: #DDD;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 16px;
 }
