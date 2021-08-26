@@ -76,9 +76,9 @@ p, span, a{
 }
 
 [class^="icon-"], [class*=" icon-"] {
-    display: grid;
+    display: flex;
 		padding-top: 70%;
-    width: 91%;
+		padding-left: 44%;
 }
 
 
