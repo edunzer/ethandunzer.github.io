@@ -324,8 +324,6 @@ p, span, a{
 
 /* C V */
 
-
-
 #cv{
 	padding-top: 80px;
 	padding-bottom: 80px;
@@ -365,24 +363,23 @@ p, span, a{
     margin-bottom: 40px;
 }
 
-#cv .skill-item + .skill-item{
+#cv .progressbar-title + .progressbar-title{
 	margin-top: 30px;
 }
 
-#cv .skill-item > h4{
+#cv .progressbar-title > h4{
 	font-size: 16px;
 	color: #222;
 }
 
-#cv .skill-item > .progress{
+#cv .progressbar-title > .bar-container{
 	height: 15px;
 	background: #DDD;
 }
 
-#cv .skill-item .progress-bar{
+#cv .progressbar-title .progressbar{
 	background: #2B2B2B;
 }
-
 
 .exp + .exp{
     margin-top: 60px;
@@ -410,6 +407,399 @@ p, span, a{
 #cv .box p{
 	color: #888;
 }
+
+.skills-bar-container li {
+  position: relative;
+	list-style-type: none;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.skills-bar-container li .bar-container {
+  background: #DDD;
+  position: relative;
+  width: 100%;
+  height: 12px;
+  margin-top: 5px;
+  display: block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+.skills-bar-container li .bar-container .progressbar {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.skills-bar-container li .bar-container #progress-htmlcss {
+  -webkit-animation-name: progress-htmlcss;
+  animation-name: progress-htmlcss;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+.skills-bar-container li .bar-container #progress-css {
+  -webkit-animation-name: progress-css;
+  animation-name: progress-css;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+.skills-bar-container li .bar-container #progress-javascript {
+  -webkit-animation-name: progress-javascript;
+  animation-name: progress-javascript;
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s;
+}
+.skills-bar-container li .bar-container #progress-php {
+  -webkit-animation-name: progress-php;
+  animation-name: progress-php;
+  -webkit-animation-delay: 2.8s;
+  animation-delay: 2.8s;
+}
+.skills-bar-container li .bar-container #progress-sql {
+  -webkit-animation-name: progress-sql;
+  animation-name: progress-sql;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+}
+.skills-bar-container li .bar-container #progress-cplspls {
+  -webkit-animation-name: progress-cplspls;
+  animation-name: progress-cplspls;
+  -webkit-animation-delay: 4.2s;
+  animation-delay: 4.2s;
+}
+.skills-bar-container li .bar-container #progress-python {
+  -webkit-animation-name: progress-python;
+  animation-name: progress-python;
+  -webkit-animation-delay: 4.9s;
+  animation-delay:4.9s;
+}
+.skills-bar-container li .bar-container #progress-csharp {
+  -webkit-animation-name: progress-csharp;
+  animation-name: progress-csharp;
+  -webkit-animation-delay: 5.6s;
+  animation-delay: 5.6s;
+}
+
+.skills-bar-container li .bar-container #progress-marketing {
+  -webkit-animation-name: progress-marketing;
+  animation-name: progress-marketing;
+  -webkit-animation-delay: 6.3s;
+  animation-delay: 6.3s;
+}
+
+.skills-bar-container li .bar-container #progress-salesForce {
+  -webkit-animation-name: progress-salesForce;
+  animation-name: progress-salesForce;
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
+}
+
+.skills-bar-container li .bar-container #progress-development {
+  -webkit-animation-name: progress-development;
+  animation-name: progress-development;
+  -webkit-animation-delay: 7.7s;
+  animation-delay: 7.7s;
+}
+.progressgreen {
+  background-color: #4d963c;
+}
+
+.progressgrey {
+  background-color: #78797a;
+}
+
+/* PROGRESS htmlcss SECTION */
+@-webkit-keyframes progress-htmlcss {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@-moz-keyframes progress-htmlcss {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes progress-htmlcss {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+/* PROGRESS javascript  SECTION */
+@-webkit-keyframes progress-javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@-moz-keyframes progress-javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes progress-javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+/* PROGRESS php SECTION */
+@-webkit-keyframes progress-php {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+@-moz-keyframes progress-php {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+@keyframes progress-php {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+/* PROGRESS sql SECTION */
+@-webkit-keyframes progress-sql {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@-moz-keyframes progress-sql {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes progress-sql {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+/* PROGRESS cplspls SECTION */
+@-webkit-keyframes progress-cplspls {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@-moz-keyframes progress-cplspls {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes progress-cplspls {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+/* PROGRESS python SECTION */
+@-webkit-keyframes progress-python {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@-moz-keyframes progress-python {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes progress-python {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+/* PROGRESS csharp SECTION */
+@-webkit-keyframes progress-csharp {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@-moz-keyframes progress-csharp {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes progress-csharp {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+/* PROGRESS marketing SECTION */
+@-webkit-keyframes progress-marketing {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@-moz-keyframes progress-marketing {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes progress-marketing {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+/* PROGRESS salesForce SECTION */
+@-webkit-keyframes progress-salesForce {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@-moz-keyframes progress-salesForce {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes progress-salesForce {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+/* PROGRESS development SECTION */
+@-webkit-keyframes progress-development {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@-moz-keyframes progress-development {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes progress-development {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
 
 
 
