@@ -18,29 +18,6 @@ var waypoint = new Waypoint({
       }
 });
 
-function animateProgressBar(){
-    document.getElementById('progress-htmlcss').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-htmlcss').style.animationPlayState = "running";
-    document.getElementById('progress-javascript').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-javascript').style.animationPlayState = "running";
-    document.getElementById('progress-php').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-php').style.animationPlayState = "running";
-    document.getElementById('progress-sql').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-sql').style.animationPlayState = "running";
-    document.getElementById('progress-cplspls').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-cplspls').style.animationPlayState = "running";
-    document.getElementById('progress-python').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-python').style.animationPlayState = "running";
-    document.getElementById('progress-csharp').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-csharp').style.animationPlayState = "running";
-    document.getElementById('progress-marketing').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-marketing').style.animationPlayState = "running";
-    document.getElementById('progress-salesForce').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-salesForce').style.animationPlayState = "running";
-    document.getElementById('progress-development').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-development').style.animationPlayState = "running";
-};
-
 
 // PROGRESS BAR ANIMATION
 
