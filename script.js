@@ -9,9 +9,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
 
 
-// WAYPOINT
+// WAYPOINT ANIMATION TRIGGER
 var waypoint = new Waypoint({
-      element: document.getElementById('cv'),
+      element: document.getElementById('trigger'),
       handler: function(direction) {
         animateProgressBar();
         console.log('Scrolled to waypoint!')
@@ -42,10 +42,9 @@ function animateProgressBar(){
 };
 
 
-// PROGRESS BAR ANIMATION
 
 
-// MAIN NAV ANIMATION
+// MAIN NAV ANIMATION TRIGGER
 $('#navigation a').on('click', function(e) {
   e.preventDefault();
   var hash = this.hash;

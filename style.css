@@ -63,6 +63,38 @@ p, span, a{
 	#portfolio h2{font-size: 25px !important;}
 }
 
+/* TYPING ANIMATION */
+
+#header-top{
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #4d963c; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .02em; /* Adjust as needed */
+  animation:
+    typing 1.5s steps(13),
+    blink-caret .6s step-end infinite alternate;
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #4d963c; }
+}
+
+
+
+
+
+
+
 /* Scroll down indicator (bouncing) */
 
 .fa-chevron-down {
@@ -276,7 +308,6 @@ p, span, a{
 	font-size: 80px;
 	color: #646669;
 }
-
 #header hr{
 	width: 200px;
 	border-color: #646669;
@@ -287,8 +318,6 @@ p, span, a{
 	font-weight: normal;
 	color: #646669;
 }
-
-
 
 
 
