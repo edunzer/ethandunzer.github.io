@@ -446,71 +446,85 @@ p, span, a{
 .skills-bar-container li .bar-container #progress-htmlcss {
   -webkit-animation-name: progress-htmlcss;
   animation-name: progress-htmlcss;
-  -webkit-animation-delay: 0.7s;
-  animation-delay: 0.7s;
-}
-.skills-bar-container li .bar-container #progress-css {
-  -webkit-animation-name: progress-css;
-  animation-name: progress-css;
-  -webkit-animation-delay: 1.4s;
-  animation-delay: 1.4s;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
 }
 .skills-bar-container li .bar-container #progress-javascript {
   -webkit-animation-name: progress-javascript;
   animation-name: progress-javascript;
-  -webkit-animation-delay: 2.1s;
-  animation-delay: 2.1s;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
 }
 .skills-bar-container li .bar-container #progress-php {
   -webkit-animation-name: progress-php;
   animation-name: progress-php;
-  -webkit-animation-delay: 2.8s;
-  animation-delay: 2.8s;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
 }
 .skills-bar-container li .bar-container #progress-sql {
   -webkit-animation-name: progress-sql;
   animation-name: progress-sql;
-  -webkit-animation-delay: 3.5s;
-  animation-delay: 3.5s;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
 }
 .skills-bar-container li .bar-container #progress-cplspls {
   -webkit-animation-name: progress-cplspls;
   animation-name: progress-cplspls;
-  -webkit-animation-delay: 4.2s;
-  animation-delay: 4.2s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
 }
 .skills-bar-container li .bar-container #progress-python {
   -webkit-animation-name: progress-python;
   animation-name: progress-python;
-  -webkit-animation-delay: 4.9s;
-  animation-delay:4.9s;
+  -webkit-animation-delay: 1.2s;
+  animation-delay:1.2s;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
 }
 .skills-bar-container li .bar-container #progress-csharp {
   -webkit-animation-name: progress-csharp;
   animation-name: progress-csharp;
-  -webkit-animation-delay: 5.6s;
-  animation-delay: 5.6s;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
 }
 
 .skills-bar-container li .bar-container #progress-marketing {
   -webkit-animation-name: progress-marketing;
   animation-name: progress-marketing;
-  -webkit-animation-delay: 6.3s;
-  animation-delay: 6.3s;
+  -webkit-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
 }
 
 .skills-bar-container li .bar-container #progress-salesForce {
   -webkit-animation-name: progress-salesForce;
   animation-name: progress-salesForce;
-  -webkit-animation-delay: 7s;
-  animation-delay: 7s;
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
 }
 
 .skills-bar-container li .bar-container #progress-development {
   -webkit-animation-name: progress-development;
   animation-name: progress-development;
-  -webkit-animation-delay: 7.7s;
-  animation-delay: 7.7s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
 }
 .progressgreen {
   background-color: #4d963c;
