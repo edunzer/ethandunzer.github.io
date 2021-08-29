@@ -67,7 +67,7 @@ p, span, a{
 
 #header-top{
 	overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid #4d963c; /* The typwriter cursor */
+  border-right: .30em solid #4d963c; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .02em; /* Adjust as needed */
@@ -88,7 +88,6 @@ p, span, a{
   from, to { border-color: transparent }
   50% { border-color: #4d963c; }
 }
-
 
 
 
@@ -345,9 +344,93 @@ p, span, a{
 	width: 180px;
 }
 
+#about-title{
+	padding-top: 10%;
+	padding-left: 30%;
+}
+
 @media (max-width: 992px){
 	.picture{display: none;}
 }
+
+/* ABOUT SECTION TYPING ANIMATION */
+
+@keyframes typing-2 {
+	0.0000%, 27.3488% { content: ""; }
+  1.1395%, 26.2093% { content: "s"; }
+  2.2791%, 25.0698% { content: "st"; }
+  3.4186%, 23.9302% { content: "stu"; }
+  4.5581%, 22.7907% { content: "stud"; }
+  5.6977%, 21.6512% { content: "stude"; }
+  6.8372%, 20.5116% { content: "studen"; }
+  7.9767%, 19.3721% { content: "student"; }
+
+  30.7674%, 51.2791% { content: ""; }
+  31.9070%, 50.1395% { content: "l"; }
+  33.0465%, 49.0000% { content: "le"; }
+  34.1860%, 47.8605% { content: "lea"; }
+  35.3256%, 46.7209% { content: "lear"; }
+  36.4651%, 45.5814% { content: "learn"; }
+  37.6047%, 44.4419% { content: "learner"; }
+
+  54.6977%, 75.2093% { content: ""; }
+  55.8372%, 74.0698% { content: "b"; }
+  56.9767%, 72.9302% { content: "bu"; }
+  58.1163%, 71.7907% { content: "bui"; }
+  59.2558%, 70.6512% { content: "buil"; }
+  60.3953%, 69.5116% { content: "build"; }
+  61.5349%, 68.3721% { content: "builde"; }
+	62.5349%, 67.3721% { content: "builder"; }
+
+
+}
+
+@keyframes blink-2 {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing-2 13.5s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink-2 0.5s linear infinite;
+}
+
+.typewriter.thick::after {
+  border-right: .7ch solid var(--caret);
+}
+
+.typewriter.nocaret::after {
+  border-right: 0;
+}
+
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+
+  @keyframes sequencePopup {
+    0%, 100% { content: "student"; }
+    25% { content: "learner"; }
+    50% { content: "builder"; }
+  }
+
+  .typewriter::before {
+    content: "student";
+    animation: sequencePopup 12s linear infinite;
+  }
+}
+
 
 
 
