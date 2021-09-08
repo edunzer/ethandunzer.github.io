@@ -472,9 +472,18 @@ p, span, a{
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+/* PROGRESS BAR ANIMATION SECTION */
 .skills-bar-container li .bar-container #progress-htmlcss {
   -webkit-animation-name: progress-htmlcss;
   animation-name: progress-htmlcss;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
+}
+.skills-bar-container li .bar-container #progress-ampscript {
+  -webkit-animation-name: progress-ampscript;
+  animation-name: progress-ampscript;
   -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
 	-webkit-animation-play-state: paused;
@@ -547,11 +556,28 @@ p, span, a{
 	animation-play-state: paused;
 }
 
+.skills-bar-container li .bar-container #progress-automation {
+  -webkit-animation-name: progress-automation;
+  animation-name: progress-automation;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
+}
+
 .skills-bar-container li .bar-container #progress-development {
   -webkit-animation-name: progress-development;
   animation-name: progress-development;
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
+  -webkit-animation-delay: 2.2s;
+  animation-delay: 2.2s;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
+}
+.skills-bar-container li .bar-container #progress-email {
+  -webkit-animation-name: progress-email;
+  animation-name: progress-email;
+  -webkit-animation-delay: 2.4s;
+  animation-delay: 2.4s;
 	-webkit-animation-play-state: paused;
 	animation-play-state: paused;
 }
@@ -562,7 +588,7 @@ p, span, a{
 .progressgrey {
   background-color: #78797a;
 }
-
+/* PROGRESS BAR PERCENTAGE SECTION */
 /* PROGRESS htmlcss SECTION */
 @-webkit-keyframes progress-htmlcss {
   0% {
@@ -588,6 +614,34 @@ p, span, a{
   }
   100% {
     width: 90%;
+  }
+}
+
+/* PROGRESS ampscript  SECTION */
+@-webkit-keyframes progress-ampscript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@-moz-keyframes progress-ampscript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes progress-ampscript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
   }
 }
 
@@ -618,6 +672,8 @@ p, span, a{
     width: 70%;
   }
 }
+
+
 
 /* PROGRESS php SECTION */
 @-webkit-keyframes progress-php {
@@ -815,6 +871,34 @@ p, span, a{
   }
 }
 
+/* PROGRESS automation SECTION */
+@-webkit-keyframes progress-automation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@-moz-keyframes progress-automation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes progress-automation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
 /* PROGRESS development SECTION */
 @-webkit-keyframes progress-development {
   0% {
@@ -840,6 +924,34 @@ p, span, a{
   }
   100% {
     width: 90%;
+  }
+}
+
+/* PROGRESS email SECTION */
+@-webkit-keyframes progress-email {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@-moz-keyframes progress-email {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes progress-email {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
   }
 }
 
