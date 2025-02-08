@@ -60,7 +60,7 @@ p, span, a{
         font-size: 16px !important;
     }
 
-	#portfolio h2{font-size: 25px !important;}
+	#educationwork h2{font-size: 25px !important;}
 }
 
 /* TYPING ANIMATION */
@@ -577,6 +577,14 @@ p, span, a{
 	-webkit-animation-play-state: paused;
 	animation-play-state: paused;
 }
+.skills-bar-container li .bar-container #progress-lwc {
+  -webkit-animation-name: progress-lwc;
+  animation-name: progress-lwc;
+  -webkit-animation-delay: 2.2s;
+  animation-delay: 2.2s;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
+}
 .skills-bar-container li .bar-container #progress-email {
   -webkit-animation-name: progress-email;
   animation-name: progress-email;
@@ -932,6 +940,34 @@ p, span, a{
 }
 
 /* PROGRESS email SECTION */
+@-webkit-keyframes progress-lwc {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@-moz-keyframes progress-lwc {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes progress-lwc {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+/* PROGRESS email SECTION */
 @-webkit-keyframes progress-email {
   0% {
     width: 0%;
@@ -966,13 +1002,13 @@ p, span, a{
 /* P O R T F O L I O */
 
 
-#portfolio{
+#educationwork{
 	padding: 80px 0;
     background: #EBEEEE;
 }
 
 
-#portfolio h2{
+#educationwork h2{
     padding: 0;
     margin: auto;
     margin-bottom: 50px;
@@ -982,18 +1018,18 @@ p, span, a{
     color: #666;
 }
 
-#portfolio img{
+#educationwork img{
 	max-width: 100%;
 }
 
-#portfolio .row > div{
+#educationwork .row > div{
 	margin-bottom: 1.5rem;
     position: relative;
 }
 
 
 
-#portfolio .row div .overlay {
+#educationwork .row div .overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -1010,14 +1046,14 @@ p, span, a{
     border-radius: 20%;
 }
 
-#portfolio .row div:hover .overlay {
+#educationwork .row div:hover .overlay {
     opacity: 1;
     transform: scale(1);
     height: 100%;
     border-radius: 0;
 }
 
-#portfolio .row div .overlay h3{
+#educationwork .row div .overlay h3{
     color: #f7f7f7;
     font-size: 20px;
     position: absolute;

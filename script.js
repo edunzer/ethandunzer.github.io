@@ -42,6 +42,8 @@ function animateProgressBar(){
     document.getElementById('progress-automation').style.animationPlayState = "running";
     document.getElementById('progress-development').style.WebkitAnimationPlayState = "running";
     document.getElementById('progress-development').style.animationPlayState = "running";
+    document.getElementById('progress-lwc').style.WebkitAnimationPlayState = "running";
+    document.getElementById('progress-lwc').style.animationPlayState = "running";
     document.getElementById('progress-email').style.WebkitAnimationPlayState = "running";
     document.getElementById('progress-email').style.animationPlayState = "running";
 };
