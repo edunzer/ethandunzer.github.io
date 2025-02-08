@@ -437,6 +437,10 @@ p, span, a{
 	color: #757575;
 }
 
+#cv .box li{
+	color: #757575;
+}
+
 .skills-bar-container li {
   position: relative;
 	list-style-type: none;
