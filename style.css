@@ -958,7 +958,7 @@ p, span, a{
   }
 }
 
-@keyframes progress-lwc {
+@keyframes progress-email {
   0% {
     width: 0%;
   }

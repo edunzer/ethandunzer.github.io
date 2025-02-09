@@ -16,37 +16,12 @@ var waypoint = new Waypoint({
       }
 });
 
-function animateProgressBar(){
-    document.getElementById('progress-htmlcss').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-htmlcss').style.animationPlayState = "running";
-    document.getElementById('progress-javascript').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-javascript').style.animationPlayState = "running";
-    document.getElementById('progress-ampscript').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-ampscript').style.animationPlayState = "running";
-    document.getElementById('progress-php').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-php').style.animationPlayState = "running";
-    document.getElementById('progress-sql').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-sql').style.animationPlayState = "running";
-    document.getElementById('progress-cplspls').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-cplspls').style.animationPlayState = "running";
-    document.getElementById('progress-python').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-python').style.animationPlayState = "running";
-    document.getElementById('progress-csharp').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-csharp').style.animationPlayState = "running";
+function animateProgressBar() {
+  document.querySelectorAll('.progressbar').forEach(el => {
+      el.style.animationPlayState = "running";
+  });
+}
 
-    document.getElementById('progress-marketing').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-marketing').style.animationPlayState = "running";
-    document.getElementById('progress-salesForce').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-salesForce').style.animationPlayState = "running";
-    document.getElementById('progress-automation').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-automation').style.animationPlayState = "running";
-    document.getElementById('progress-development').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-development').style.animationPlayState = "running";
-    document.getElementById('progress-lwc').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-lwc').style.animationPlayState = "running";
-    document.getElementById('progress-email').style.WebkitAnimationPlayState = "running";
-    document.getElementById('progress-email').style.animationPlayState = "running";
-};
 
 // MAIN NAV ANIMATION TRIGGER
 $('#navigation a').on('click', function(e) {
@@ -88,33 +63,18 @@ $("#contact input, #contact textarea").on('focusout', function(){
 });
 
 
-// move section down one
+  // move section down one
   $(document).on("click", "#moveDown", function () {
     $.fn.fullpage.moveSectionDown();
   });
 
-  // smooth scrolling
-  $(document).ready(function(){
-  // Add smooth scrolling to all links
-    $("a").on('click', function(event) {
-
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
-        // Prevent default anchor click behavior
-        event.preventDefault();
-
-        // Store hash
-        var hash = this.hash;
-
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 800, function(){
-
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        } // End if
-      });
+  // Smooth scrolling for anchor links (no jQuery needed)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
+  });
+
