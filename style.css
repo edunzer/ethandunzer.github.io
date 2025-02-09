@@ -43,8 +43,6 @@ p, span, a{
     }
 
 
-
-
 @media (max-width: 576px){
 
 	#header{
@@ -88,10 +86,6 @@ p, span, a{
   from, to { border-color: transparent }
   50% { border-color: #4d963c; }
 }
-
-
-
-
 
 
 
@@ -173,10 +167,7 @@ p, span, a{
   animation: bounce 2s infinite;
 }
 
-
-
 /* H E A D E R */
-
 
 #header{
 	min-height: 100vh;
@@ -319,12 +310,7 @@ p, span, a{
 	color: #646669;
 }
 
-
-
 /* A B O U T */
-
-
-
 
 #about{
 	padding-top: 80px;
@@ -348,7 +334,6 @@ p, span, a{
 @media (max-width: 992px){
 	.picture{display: none;}
 }
-
 
 
 /* C V */
@@ -477,526 +462,35 @@ p, span, a{
   animation-fill-mode: both;
 }
 /* PROGRESS BAR ANIMATION SECTION */
-.skills-bar-container li .bar-container #progress-htmlcss {
-  -webkit-animation-name: progress-htmlcss;
-  animation-name: progress-htmlcss;
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-	-webkit-animation-play-state: paused;
-	animation-play-state: paused;
-}
-.skills-bar-container li .bar-container #progress-ampscript {
-  -webkit-animation-name: progress-ampscript;
-  animation-name: progress-ampscript;
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-	-webkit-animation-play-state: paused;
-	animation-play-state: paused;
-}
-.skills-bar-container li .bar-container #progress-javascript {
-  -webkit-animation-name: progress-javascript;
-  animation-name: progress-javascript;
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-	-webkit-animation-play-state: paused;
-	animation-play-state: paused;
-}
-.skills-bar-container li .bar-container #progress-php {
-  -webkit-animation-name: progress-php;
-  animation-name: progress-php;
-  -webkit-animation-delay: 0.6s;
-  animation-delay: 0.6s;
-	-webkit-animation-play-state: paused;
-	animation-play-state: paused;
-}
-.skills-bar-container li .bar-container #progress-sql {
-  -webkit-animation-name: progress-sql;
-  animation-name: progress-sql;
-  -webkit-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-	-webkit-animation-play-state: paused;
-	animation-play-state: paused;
-}
-.skills-bar-container li .bar-container #progress-cplspls {
-  -webkit-animation-name: progress-cplspls;
-  animation-name: progress-cplspls;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-	-webkit-animation-play-state: paused;
-	animation-play-state: paused;
-}
-.skills-bar-container li .bar-container #progress-python {
-  -webkit-animation-name: progress-python;
-  animation-name: progress-python;
-  -webkit-animation-delay: 1.2s;
-  animation-delay:1.2s;
-	-webkit-animation-play-state: paused;
-	animation-play-state: paused;
-}
-.skills-bar-container li .bar-container #progress-csharp {
-  -webkit-animation-name: progress-csharp;
-  animation-name: progress-csharp;
-  -webkit-animation-delay: 1.4s;
-  animation-delay: 1.4s;
-	-webkit-animation-play-state: paused;
-	animation-play-state: paused;
+
+/* Generic animation for all progress bars */
+@keyframes fillProgress {
+  from { width: 0%; }
+  to { width: var(--progress-width, 0%); }
 }
 
-.skills-bar-container li .bar-container #progress-marketing {
-  -webkit-animation-name: progress-marketing;
-  animation-name: progress-marketing;
-  -webkit-animation-delay: 1.6s;
-  animation-delay: 1.6s;
-	-webkit-animation-play-state: paused;
-	animation-play-state: paused;
+/* Apply the animation to all progress bars */
+.skills-bar-container .progressbar {
+  background: #78797a; /* Green progress bar */
+  animation: fillProgress 2s ease-out forwards;
+  animation-play-state: paused; /* Prevents auto-playing */
 }
 
-.skills-bar-container li .bar-container #progress-salesForce {
-  -webkit-animation-name: progress-salesForce;
-  animation-name: progress-salesForce;
-  -webkit-animation-delay: 1.8s;
-  animation-delay: 1.8s;
-	-webkit-animation-play-state: paused;
-	animation-play-state: paused;
-}
-
-.skills-bar-container li .bar-container #progress-automation {
-  -webkit-animation-name: progress-automation;
-  animation-name: progress-automation;
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-	-webkit-animation-play-state: paused;
-	animation-play-state: paused;
-}
-
-.skills-bar-container li .bar-container #progress-development {
-  -webkit-animation-name: progress-development;
-  animation-name: progress-development;
-  -webkit-animation-delay: 2.2s;
-  animation-delay: 2.2s;
-	-webkit-animation-play-state: paused;
-	animation-play-state: paused;
-}
-.skills-bar-container li .bar-container #progress-lwc {
-  -webkit-animation-name: progress-lwc;
-  animation-name: progress-lwc;
-  -webkit-animation-delay: 2.2s;
-  animation-delay: 2.2s;
-	-webkit-animation-play-state: paused;
-	animation-play-state: paused;
-}
-.skills-bar-container li .bar-container #progress-email {
-  -webkit-animation-name: progress-email;
-  animation-name: progress-email;
-  -webkit-animation-delay: 2.4s;
-  animation-delay: 2.4s;
-	-webkit-animation-play-state: paused;
-	animation-play-state: paused;
-}
-.progressgreen {
-  background-color: #4d963c;
-}
-
-.progressgrey {
-  background-color: #78797a;
-}
-/* PROGRESS BAR PERCENTAGE SECTION */
-/* PROGRESS htmlcss SECTION */
-@-webkit-keyframes progress-htmlcss {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 90%;
-  }
-}
-
-@-moz-keyframes progress-htmlcss {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 90%;
-  }
-}
-
-@keyframes progress-htmlcss {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 90%;
-  }
-}
-
-/* PROGRESS ampscript  SECTION */
-@-webkit-keyframes progress-ampscript {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 50%;
-  }
-}
-
-@-moz-keyframes progress-ampscript {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 50%;
-  }
-}
-
-@keyframes progress-ampscript {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 50%;
-  }
-}
-
-/* PROGRESS javascript  SECTION */
-@-webkit-keyframes progress-javascript {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 70%;
-  }
-}
-
-@-moz-keyframes progress-javascript {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 70%;
-  }
-}
-
-@keyframes progress-javascript {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 70%;
-  }
-}
-
-
-
-/* PROGRESS php SECTION */
-@-webkit-keyframes progress-php {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 30%;
-  }
-}
-
-@-moz-keyframes progress-php {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 30%;
-  }
-}
-
-@keyframes progress-php {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 30%;
-  }
-}
-
-/* PROGRESS sql SECTION */
-@-webkit-keyframes progress-sql {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 80%;
-  }
-}
-
-@-moz-keyframes progress-sql {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 80%;
-  }
-}
-
-@keyframes progress-sql {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 80%;
-  }
-}
-
-/* PROGRESS cplspls SECTION */
-@-webkit-keyframes progress-cplspls {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 60%;
-  }
-}
-
-@-moz-keyframes progress-cplspls {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 60%;
-  }
-}
-
-@keyframes progress-cplspls {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 60%;
-  }
-}
-
-/* PROGRESS python SECTION */
-@-webkit-keyframes progress-python {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 90%;
-  }
-}
-
-@-moz-keyframes progress-python {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 90%;
-  }
-}
-
-@keyframes progress-python {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 90%;
-  }
-}
-
-/* PROGRESS csharp SECTION */
-@-webkit-keyframes progress-csharp {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 70%;
-  }
-}
-
-@-moz-keyframes progress-csharp {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 70%;
-  }
-}
-
-@keyframes progress-csharp {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 70%;
-  }
-}
-
-/* PROGRESS marketing SECTION */
-@-webkit-keyframes progress-marketing {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 80%;
-  }
-}
-
-@-moz-keyframes progress-marketing {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 80%;
-  }
-}
-
-@keyframes progress-marketing {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 80%;
-  }
-}
-
-/* PROGRESS salesForce SECTION */
-@-webkit-keyframes progress-salesForce {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 60%;
-  }
-}
-
-@-moz-keyframes progress-salesForce {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 60%;
-  }
-}
-
-@keyframes progress-salesForce {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 60%;
-  }
-}
-
-/* PROGRESS automation SECTION */
-@-webkit-keyframes progress-automation {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 80%;
-  }
-}
-
-@-moz-keyframes progress-automation {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 80%;
-  }
-}
-
-@keyframes progress-automation {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 80%;
-  }
-}
-
-/* PROGRESS development SECTION */
-@-webkit-keyframes progress-development {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 90%;
-  }
-}
-
-@-moz-keyframes progress-development {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 90%;
-  }
-}
-
-@keyframes progress-development {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 90%;
-  }
-}
-
-/* PROGRESS email SECTION */
-@-webkit-keyframes progress-lwc {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 70%;
-  }
-}
-
-@-moz-keyframes progress-lwc {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 70%;
-  }
-}
-
-@keyframes progress-email {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 70%;
-  }
-}
-
-/* PROGRESS email SECTION */
-@-webkit-keyframes progress-email {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 70%;
-  }
-}
-
-@-moz-keyframes progress-email {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 70%;
-  }
-}
-
-@keyframes progress-email {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 70%;
-  }
-}
-
-
-
+/* Each progress bar will have a custom percentage */
+#progress-htmlcss { --progress-width: 90%; }
+#progress-ampscript { --progress-width: 50%; }
+#progress-javascript { --progress-width: 70%; }
+#progress-php { --progress-width: 30%; }
+#progress-sql { --progress-width: 80%; }
+#progress-cplspls { --progress-width: 60%; }
+#progress-python { --progress-width: 90%; }
+#progress-csharp { --progress-width: 70%; }
+#progress-marketing { --progress-width: 80%; }
+#progress-salesForce { --progress-width: 60%; }
+#progress-automation { --progress-width: 80%; }
+#progress-development { --progress-width: 90%; }
+#progress-lwc { --progress-width: 70%; }
+#progress-email { --progress-width: 70%; }
 
 
 /* P O R T F O L I O */
@@ -1071,14 +565,7 @@ p, span, a{
     -ms-transform: translate(-50%, -50%) !important;
 }
 
-
-
-
-
-
 /*  C O N T A C T */
-
-
 
 #contact{
     background: #191919;
@@ -1106,13 +593,6 @@ p, span, a{
     color: #F5F5F5;
     font-size: 45px;
 }
-
-
-
-
-
-
-
 
 /*  F O O T E R  */
 

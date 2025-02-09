@@ -1,29 +1,23 @@
-// Use Intersection Observer instead of Waypoints.js
+// Function to animate progress bars
+function animateProgressBar() {
+  document.querySelectorAll('.progressbar').forEach(el => {
+      el.style.animationPlayState = "running";
+  });
+}
+
+// Ensure animations trigger when the skills section is in view
+const skillsSection = document.getElementById('cv');
+
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
       if (entry.isIntersecting) {
-          animateProgressBar();
-          console.log('Scrolled to progress bar section!');
+          animateProgressBar(); // Start the animation
+          observer.unobserve(skillsSection); // Stop observing once triggered
       }
   });
-}, { threshold: 0.5 });
+}, { threshold: 0.2 }); // Triggers when 20% of the section is in view
 
-// Attach the observer to the progress bar trigger element
-observer.observe(document.getElementById('trigger'));
-
-// Function to animate the progress bars
-function animateProgressBar() {
-  document.querySelectorAll('.progressbar').forEach(el => {
-      el.style.animationPlayState = "running";
-  });
-}
-
-
-function animateProgressBar() {
-  document.querySelectorAll('.progressbar').forEach(el => {
-      el.style.animationPlayState = "running";
-  });
-}
+observer.observe(skillsSection);
 
 
 // MAIN NAV ANIMATION TRIGGER
