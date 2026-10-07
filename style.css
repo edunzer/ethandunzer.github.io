@@ -512,11 +512,29 @@ a:hover { color: #a3d0fc; }
 }
 
 @media (max-width: 39.99rem) {
+  .hero__inner { gap: 2.5rem; }
+
   .stack {
+    --row: 2.5rem;
     grid-template-columns: minmax(0, 1fr);
     row-gap: 1.5rem;
   }
   .layer__link { display: none; }
+  .layer--core { min-height: 3.25rem; font-size: 1.25rem; }
+
+  /* integrations sit in a 2x2 grid under the stack; the bus only reads beside it,
+     so each node moves inside its box */
+  .integrations {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-left: 0;
+  }
+  .integrations::before,
+  .integrations li::after { display: none; }
+  .integrations li::before { left: 0.75rem; }
+  .integrations a {
+    padding: 0.5rem 0.75rem 0.5rem 1.75rem;
+    white-space: normal;
+  }
 }
 
 /* ---------- Truss ---------- */
