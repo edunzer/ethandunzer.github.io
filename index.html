@@ -1,523 +1,485 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add('js');</script>
 
-  <title>Ethan Dunzer - Personal portfolio</title>
-  <meta name="keywords" content="Ethan, Dunzer, Website, EthanDunzer, edunzer, personal, resume, portfolio, experience"/>
-  <meta name="description" content="This is the personal portfolio for Ethan Dunzer. Complete with about, experience, skills, and other information sections.">
-
-  <link rel="icon" href="favicon.ico"/>
-
+  <title>Ethan Dunzer | Salesforce solution architect</title>
+  <meta name="description" content="Ethan Dunzer is a Salesforce solution architect at LOVALTO in Portland, Oregon. He designs and builds Salesforce systems, automation and integrations with Certinia PSA, Okta, Sage Intacct, Slack and Google Workspace.">
   <meta name="robots" content="index, follow">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="theme-color" content="#2e3032">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
+  <!-- Link previews (LinkedIn, Slack, etc.). LinkedIn needs an absolute URL:
+       once the site is live, change these to https://<your-domain>/img/og-image.png -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Ethan Dunzer | Salesforce solution architect">
+  <meta property="og:description" content="Designing systems that hold up. Solution architect at LOVALTO.">
+  <meta property="og:image" content="img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Designing systems that hold up. Solution architect at LOVALTO.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ethan Dunzer",
+    "jobTitle": "Solution Architect",
+    "worksFor": { "@type": "Organization", "name": "LOVALTO" },
+    "email": "mailto:ethandunzer@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Portland", "addressRegion": "OR", "addressCountry": "US" },
+    "alumniOf": "Oregon Institute of Technology",
+    "knowsAbout": ["Salesforce", "Agentforce", "Salesforce Flow", "Apex", "Lightning Web Components", "Certinia PSA", "Systems integration"],
+    "sameAs": ["https://www.linkedin.com/in/ethan-dunzer-salesforce/", "https://github.com/edunzer"]
+  }
+  </script>
 </head>
 
-<body id="body" data-spy="scroll" data-target="#navigation" data-offset="30">
-  <!-- START NAV -->
-  <div id="header" class="container-fluid d-flex">
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="menu-overlay"></div>
-    <div class="menu">
-      <div class="toggler">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
-      <ul class="nav-content" id="navigation">
-        <li><a class="nav-link" href="#header">Home</a></li>
-        <li><a class="nav-link" href="#about">About</a></li>
-        <li><a class="nav-link" href="#cv">Skills</a></li>
-        <li><a class="nav-link" href="#experience">Experience</a></li>
-        <li><a class="nav-link" href="#education">Education</a></li>
-        <li><a class="nav-link" href="#contact">Contact</a></li>
-    </ul>    
-    </div>
-    <!-- END NAV -->
-    <!-- BANNER -->
-    <div class="row align-items-center justify-content-center text-center">
-      <div>
-        <h1 class="type-animation" id="header-top">Hi I'm Ethan</h1>
-        <hr>
-        <h4 id="header-bottom">Welcome to my website</h4>
-        <div class="icon-bouncing-arrow">
-          <a href="#about"><i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i></a>
-        </div>
-      </div>
-    </div>
+  <header class="site-header">
+    <nav class="nav wrap wrap--wide" aria-label="Primary">
+      <a class="nav__name" href="#top">Ethan Dunzer</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  </div>
+  <main id="main">
 
-<!-- START ABOUT SECTION -->
-
-  <div id="about" class="container-fluid">
-    <div class="container">
-      <div class="row">
-        <!-- PERSONAL PHOTO -->
-        <div class="col-md-2 col-sm-12 picture">
-          <img src="https://avatars.githubusercontent.com/u/20893684?v=4" class="rounded-circle" alt="picture">
-        </div>
-
-        <div class="col-md-9 col-sm-12 offset-md-1">
-          <h2>About</h2>
-          <p><b>Solving complex business challenges with Salesforce architecture, automation, and integrations is the focus of my work.</b></p>
-
-          <p>As a Business Application Architect at The Opus Group, I create Salesforce solutions that improve efficiency, elevate user experiences, and optimize business operations.</p>
-          
-          <p>With a Bachelor of Science in Information Technology from Oregon Institute of Technology (GPA: 3.8), my background combines technical expertise with a problem-solving mindset.</p>
-
-          <p>My passion for design, architecture, and engineering shapes the way I solve problems. Growing up around construction projects, I developed an eye for structural design and process efficiency, applying those principles to software development and system architecture. Whether working on a Salesforce solution or designing a personal project, I enjoy breaking down complex problems and creating well-structured, scalable solutions.</p>
-
-          <p id="trigger">Continuous learning and adaptability drive my career, and I am always interested in new challenges that expand my expertise. True progress often requires challenging assumptions, questioning the status quo, and being unafraid to say "no" when something isn’t right. This mindset aligns with one of my favorite quotes:</p>
-
-          <p>"The reasonable person adapts themselves to the world: the unreasonable person persists in trying to adapt the world to themselves. Therefore, all progress depends on the unreasonable person."</p>
-          <br>
-          <p>Please Enjoy the rest of my website. Feel free to also check out my <a href="https://github.com/edunzer/CURRENT_RESUME/raw/main/Resume%204.4.0.pdf" style="color:#F5F5F5">Resume</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- END ABOUT SECTION -->
-
-  <!-- START SKILLS SECTION -->
-
-  <div class="container-fluid" id="cv">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2 col-sm-12">
-          <h3>Skills</h3>
-        </div>
-        <div class="col-md-9 col-sm-12 offset-md-1">
-
-          <!-- PROGRAMMING SKILLS -->
-
-          <div class="skills">
-            <h4>Programming languages</h4>
-
-            <ul class="skills-bar-container">
-
-              <li>
-                <div class="progressbar-title">
-                  <h4>HTML / CSS</h4>
-                </div>
-                <div class="bar-container">
-                  <span class="progressbar progressgrey" id="progress-htmlcss"></span>
-                </div>
-              </li>
-
-              <li>
-                <div class="progressbar-title">
-                  <h4>AMPscript</h4>
-                </div>
-                <div class="bar-container">
-                  <span class="progressbar progressgrey" id="progress-ampscript"></span>
-                </div>
-              </li>
-
-              <li>
-                <div class="progressbar-title">
-                  <h4>JavaScript</h4>
-                </div>
-                <div class="bar-container">
-                  <span class="progressbar progressgrey" id="progress-javascript"></span>
-                </div>
-              </li>
-
-              <li>
-                <div class="progressbar-title">
-                  <h4>PHP</h4>
-                </div>
-                <div class="bar-container">
-                  <span class="progressbar progressgrey" id="progress-php"></span>
-                </div>
-              </li>
-
-              <li>
-                <div class="progressbar-title">
-                  <h4>SQL</h4>
-                </div>
-                <div class="bar-container">
-                  <span class="progressbar progressgrey" id="progress-sql"></span>
-                </div>
-              </li>
-
-              <li>
-                <div class="progressbar-title">
-                  <h4>C++</h4>
-                </div>
-                <div class="bar-container">
-                  <span class="progressbar progressgrey" id="progress-cplspls"></span>
-                </div>
-              </li>
-
-              <li>
-                <div class="progressbar-title">
-                  <h4>Python</h4>
-                </div>
-                <div class="bar-container">
-                  <span class="progressbar progressgrey" id="progress-python"></span>
-                </div>
-              </li>
-
-              <li>
-                <div class="progressbar-title">
-                  <h4>C#</h4>
-                </div>
-                <div class="bar-container">
-                  <span class="progressbar progressgrey" id="progress-csharp"></span>
-                </div>
-              </li>
-
-            </ul>
-
+    <!-- HERO: mirrors the LinkedIn banner -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__inner wrap wrap--wide">
+        <div class="hero__text">
+          <h1 id="hero-title">Designing systems that hold up.</h1>
+          <p class="dimension">
+            <span class="dimension__arm dimension__arm--start" aria-hidden="true"></span>
+            <span class="dimension__label">Solution architect at LOVALTO</span>
+            <span class="dimension__arm dimension__arm--end" aria-hidden="true"></span>
+          </p>
+          <p class="hero__tagline">The architect who scopes it builds it.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="mailto:ethandunzer@gmail.com">Email me</a>
+            <a class="btn" href="https://www.linkedin.com/in/ethan-dunzer-salesforce/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
           </div>
+        </div>
 
-          <!-- KNOWLEDGE SKILLS -->
-
-          <div class="skills">
-            <h4>Knowledge</h4>
-
-            <ul class="skills-bar-container">
-
-            <li>
-              <div class="progressbar-title">
-                <h4>Salesforce Administration</h4>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progressgrey" id="progress-marketing"></span>
-              </div>
-            </li>
-
-            <li>
-              <div class="progressbar-title">
-                <h4>SalesForce Marketing Cloud</h4>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progressgrey" id="progress-salesForce"></span>
-              </div>
-            </li>
-
-            <li>
-              <div class="progressbar-title">
-                <h4>Salesforce Automation</h4>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progressgrey" id="progress-automation"></span>
-              </div>
-            </li>
-
-            <li>
-              <div class="progressbar-title">
-                <h4>Lighting Web Components</h4>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progressgrey" id="progress-lwc"></span>
-              </div>
-            </li>
-
-            <li>
-              <div class="progressbar-title">
-                <h4>Web Development</h4>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progressgrey" id="progress-development"></span>
-              </div>
-            </li>
-
-            <li>
-              <div class="progressbar-title">
-                <h4>Campaign Automation</h4>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progressgrey" id="progress-email"></span>
-              </div>
-            </li>
-
+        <figure class="stack">
+          <figcaption class="visually-hidden">The stack I build on: Salesforce at the core, Flow, Apex and LWC and Agentforce on top of it, and a data foundation underneath. Integrations:</figcaption>
+          <ol class="stack__layers" aria-hidden="true">
+            <li class="layer layer--planned">Agentforce</li>
+            <li class="layer">Flow, Apex, LWC</li>
+            <li class="layer layer--core">Salesforce<span class="layer__link"></span></li>
+            <li class="layer layer--base">Data foundation</li>
+          </ol>
+          <ul class="integrations">
+            <li><a href="#int-certinia">Certinia PSA</a></li>
+            <li><a href="#int-okta">Okta</a></li>
+            <li><a href="#int-sage-intacct">Sage Intacct</a></li>
+            <li><a href="#int-slack">Slack</a></li>
+            <li><a href="#int-google-workspace">Google Workspace</a></li>
           </ul>
+        </figure>
+      </div>
 
+      <div class="hero__base wrap wrap--wide">
+        <svg class="truss truss--wide" viewBox="0 0 1172 124" data-truss='{"pad":34,"p":92,"n":12,"top":14,"bot":90,"amax":14}' aria-hidden="true" focusable="false">
+        <path class="truss__m truss__m--chord draw" style="--d:0.00s" pathLength="1" data-a="b0" data-b="b1" data-kind="chord" d="M34 90L126 90"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.04s" pathLength="1" data-a="b1" data-b="b2" data-kind="chord" d="M126 90L218 90"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.07s" pathLength="1" data-a="b2" data-b="b3" data-kind="chord" d="M218 90L310 90"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.11s" pathLength="1" data-a="b3" data-b="b4" data-kind="chord" d="M310 90L402 90"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.14s" pathLength="1" data-a="b4" data-b="b5" data-kind="chord" d="M402 90L494 90"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.18s" pathLength="1" data-a="b5" data-b="b6" data-kind="chord" d="M494 90L586 90"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.21s" pathLength="1" data-a="b6" data-b="b7" data-kind="chord" d="M586 90L678 90"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.25s" pathLength="1" data-a="b7" data-b="b8" data-kind="chord" d="M678 90L770 90"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.28s" pathLength="1" data-a="b8" data-b="b9" data-kind="chord" d="M770 90L862 90"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.32s" pathLength="1" data-a="b9" data-b="b10" data-kind="chord" d="M862 90L954 90"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.35s" pathLength="1" data-a="b10" data-b="b11" data-kind="chord" d="M954 90L1046 90"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.39s" pathLength="1" data-a="b11" data-b="b12" data-kind="chord" d="M1046 90L1138 90"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.20s" pathLength="1" data-a="b0" data-b="t0" data-kind="web" d="M34 90L80 14"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.23s" pathLength="1" data-a="t0" data-b="b1" data-kind="web" d="M80 14L126 90"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.25s" pathLength="1" data-a="b1" data-b="t1" data-kind="web" d="M126 90L172 14"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.28s" pathLength="1" data-a="t1" data-b="b2" data-kind="web" d="M172 14L218 90"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.30s" pathLength="1" data-a="b2" data-b="t2" data-kind="web" d="M218 90L264 14"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.33s" pathLength="1" data-a="t2" data-b="b3" data-kind="web" d="M264 14L310 90"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.35s" pathLength="1" data-a="b3" data-b="t3" data-kind="web" d="M310 90L356 14"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.38s" pathLength="1" data-a="t3" data-b="b4" data-kind="web" d="M356 14L402 90"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.40s" pathLength="1" data-a="b4" data-b="t4" data-kind="web" d="M402 90L448 14"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.43s" pathLength="1" data-a="t4" data-b="b5" data-kind="web" d="M448 14L494 90"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.45s" pathLength="1" data-a="b5" data-b="t5" data-kind="web" d="M494 90L540 14"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.47s" pathLength="1" data-a="t5" data-b="b6" data-kind="web" d="M540 14L586 90"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.50s" pathLength="1" data-a="b6" data-b="t6" data-kind="web" d="M586 90L632 14"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.53s" pathLength="1" data-a="t6" data-b="b7" data-kind="web" d="M632 14L678 90"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.55s" pathLength="1" data-a="b7" data-b="t7" data-kind="web" d="M678 90L724 14"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.58s" pathLength="1" data-a="t7" data-b="b8" data-kind="web" d="M724 14L770 90"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.60s" pathLength="1" data-a="b8" data-b="t8" data-kind="web" d="M770 90L816 14"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.62s" pathLength="1" data-a="t8" data-b="b9" data-kind="web" d="M816 14L862 90"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.65s" pathLength="1" data-a="b9" data-b="t9" data-kind="web" d="M862 90L908 14"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.68s" pathLength="1" data-a="t9" data-b="b10" data-kind="web" d="M908 14L954 90"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.70s" pathLength="1" data-a="b10" data-b="t10" data-kind="web" d="M954 90L1000 14"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.72s" pathLength="1" data-a="t10" data-b="b11" data-kind="web" d="M1000 14L1046 90"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.75s" pathLength="1" data-a="b11" data-b="t11" data-kind="web" d="M1046 90L1092 14"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.78s" pathLength="1" data-a="t11" data-b="b12" data-kind="web" d="M1092 14L1138 90"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.85s" pathLength="1" data-a="t0" data-b="t1" data-kind="chord" d="M80 14L172 14"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.88s" pathLength="1" data-a="t1" data-b="t2" data-kind="chord" d="M172 14L264 14"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.91s" pathLength="1" data-a="t2" data-b="t3" data-kind="chord" d="M264 14L356 14"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.94s" pathLength="1" data-a="t3" data-b="t4" data-kind="chord" d="M356 14L448 14"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.97s" pathLength="1" data-a="t4" data-b="t5" data-kind="chord" d="M448 14L540 14"/>
+        <path class="truss__m truss__m--chord draw" style="--d:1.00s" pathLength="1" data-a="t5" data-b="t6" data-kind="chord" d="M540 14L632 14"/>
+        <path class="truss__m truss__m--chord draw" style="--d:1.03s" pathLength="1" data-a="t6" data-b="t7" data-kind="chord" d="M632 14L724 14"/>
+        <path class="truss__m truss__m--chord draw" style="--d:1.06s" pathLength="1" data-a="t7" data-b="t8" data-kind="chord" d="M724 14L816 14"/>
+        <path class="truss__m truss__m--chord draw" style="--d:1.09s" pathLength="1" data-a="t8" data-b="t9" data-kind="chord" d="M816 14L908 14"/>
+        <path class="truss__m truss__m--chord draw" style="--d:1.12s" pathLength="1" data-a="t9" data-b="t10" data-kind="chord" d="M908 14L1000 14"/>
+        <path class="truss__m truss__m--chord draw" style="--d:1.15s" pathLength="1" data-a="t10" data-b="t11" data-kind="chord" d="M1000 14L1092 14"/>
+        <path class="truss__support draw" style="--d:0s" pathLength="1" d="M34 90l-11 16h22z"/>
+        <path class="truss__support draw" style="--d:0s" pathLength="1" d="M1138 90l-11 10h22z"/>
+        <g class="truss__nodes"><circle data-n="b1" cx="126" cy="90" r="3.5"/><circle data-n="b2" cx="218" cy="90" r="3.5"/><circle data-n="b3" cx="310" cy="90" r="3.5"/><circle data-n="b4" cx="402" cy="90" r="3.5"/><circle data-n="b5" cx="494" cy="90" r="3.5"/><circle data-n="b6" cx="586" cy="90" r="3.5"/><circle data-n="b7" cx="678" cy="90" r="3.5"/><circle data-n="b8" cx="770" cy="90" r="3.5"/><circle data-n="b9" cx="862" cy="90" r="3.5"/><circle data-n="b10" cx="954" cy="90" r="3.5"/><circle data-n="b11" cx="1046" cy="90" r="3.5"/><circle data-n="t0" cx="80" cy="14" r="3.5"/><circle data-n="t1" cx="172" cy="14" r="3.5"/><circle data-n="t2" cx="264" cy="14" r="3.5"/><circle data-n="t3" cx="356" cy="14" r="3.5"/><circle data-n="t4" cx="448" cy="14" r="3.5"/><circle data-n="t5" cx="540" cy="14" r="3.5"/><circle data-n="t6" cx="632" cy="14" r="3.5"/><circle data-n="t7" cx="724" cy="14" r="3.5"/><circle data-n="t8" cx="816" cy="14" r="3.5"/><circle data-n="t9" cx="908" cy="14" r="3.5"/><circle data-n="t10" cx="1000" cy="14" r="3.5"/><circle data-n="t11" cx="1092" cy="14" r="3.5"/><circle cx="1133" cy="103" r="3"/><circle cx="1143" cy="103" r="3"/></g>
+        <path class="truss__ground" d="M18 106h32M21 106l-5 7M28 106l-5 7M35 106l-5 7M42 106l-5 7M49 106l-5 7M1122 106h32M1125 106l-5 7M1132 106l-5 7M1139 106l-5 7M1146 106l-5 7M1153 106l-5 7"/>
+        <g class="truss__load" transform="translate(586 14)"><path d="M0 -34V-5"/><path d="M-5.5 -12L0 -4.5L5.5 -12"/></g>
+        </svg>
+        <svg class="truss truss--compact" viewBox="0 0 388 100" data-truss='{"pad":34,"p":64,"n":5,"top":14,"bot":66,"amax":8}' aria-hidden="true" focusable="false">
+        <path class="truss__m truss__m--chord draw" style="--d:0.00s" pathLength="1" data-a="b0" data-b="b1" data-kind="chord" d="M34 66L98 66"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.04s" pathLength="1" data-a="b1" data-b="b2" data-kind="chord" d="M98 66L162 66"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.07s" pathLength="1" data-a="b2" data-b="b3" data-kind="chord" d="M162 66L226 66"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.11s" pathLength="1" data-a="b3" data-b="b4" data-kind="chord" d="M226 66L290 66"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.14s" pathLength="1" data-a="b4" data-b="b5" data-kind="chord" d="M290 66L354 66"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.20s" pathLength="1" data-a="b0" data-b="t0" data-kind="web" d="M34 66L66 14"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.23s" pathLength="1" data-a="t0" data-b="b1" data-kind="web" d="M66 14L98 66"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.25s" pathLength="1" data-a="b1" data-b="t1" data-kind="web" d="M98 66L130 14"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.28s" pathLength="1" data-a="t1" data-b="b2" data-kind="web" d="M130 14L162 66"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.30s" pathLength="1" data-a="b2" data-b="t2" data-kind="web" d="M162 66L194 14"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.33s" pathLength="1" data-a="t2" data-b="b3" data-kind="web" d="M194 14L226 66"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.35s" pathLength="1" data-a="b3" data-b="t3" data-kind="web" d="M226 66L258 14"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.38s" pathLength="1" data-a="t3" data-b="b4" data-kind="web" d="M258 14L290 66"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.40s" pathLength="1" data-a="b4" data-b="t4" data-kind="web" d="M290 66L322 14"/>
+        <path class="truss__m truss__m--web draw" style="--d:0.43s" pathLength="1" data-a="t4" data-b="b5" data-kind="web" d="M322 14L354 66"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.50s" pathLength="1" data-a="t0" data-b="t1" data-kind="chord" d="M66 14L130 14"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.53s" pathLength="1" data-a="t1" data-b="t2" data-kind="chord" d="M130 14L194 14"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.56s" pathLength="1" data-a="t2" data-b="t3" data-kind="chord" d="M194 14L258 14"/>
+        <path class="truss__m truss__m--chord draw" style="--d:0.59s" pathLength="1" data-a="t3" data-b="t4" data-kind="chord" d="M258 14L322 14"/>
+        <path class="truss__support draw" style="--d:0s" pathLength="1" d="M34 66l-11 16h22z"/>
+        <path class="truss__support draw" style="--d:0s" pathLength="1" d="M354 66l-11 10h22z"/>
+        <g class="truss__nodes"><circle data-n="b1" cx="98" cy="66" r="3.5"/><circle data-n="b2" cx="162" cy="66" r="3.5"/><circle data-n="b3" cx="226" cy="66" r="3.5"/><circle data-n="b4" cx="290" cy="66" r="3.5"/><circle data-n="t0" cx="66" cy="14" r="3.5"/><circle data-n="t1" cx="130" cy="14" r="3.5"/><circle data-n="t2" cx="194" cy="14" r="3.5"/><circle data-n="t3" cx="258" cy="14" r="3.5"/><circle data-n="t4" cx="322" cy="14" r="3.5"/><circle cx="349" cy="79" r="3"/><circle cx="359" cy="79" r="3"/></g>
+        <path class="truss__ground" d="M18 82h32M21 82l-5 7M28 82l-5 7M35 82l-5 7M42 82l-5 7M49 82l-5 7M338 82h32M341 82l-5 7M348 82l-5 7M355 82l-5 7M362 82l-5 7M369 82l-5 7"/>
+        <g class="truss__load" transform="translate(194 14)"><path d="M0 -34V-5"/><path d="M-5.5 -12L0 -4.5L5.5 -12"/></g>
+        </svg>
+      </div>
+    </section>
 
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap section__grid">
+        <h2 class="section__title" id="about-title">About</h2>
+        <div class="about">
+          <figure class="portrait">
+            <img src="img/ethan-dunzer.jpg" width="640" height="614" alt="Low-poly portrait of Ethan Dunzer">
+          </figure>
+          <div class="about__text">
+            <p class="about__lead">I design Salesforce systems and then build them myself: the architecture, the automation, and the integrations that connect Salesforce to the rest of the business.</p>
+            <p>I'm a solution architect at LOVALTO. Before that, I grew from junior Salesforce administrator to senior business application architect at The Opus Group, where I was the lead architect for a 700+ user platform spanning Sales Cloud, Service Cloud and Certinia PSA, with integrations to Okta, Slack, Sage Intacct and Google Workspace.</p>
+            <p>Design, architecture and engineering shape how I solve problems. Growing up around construction projects gave me an eye for structural design and process efficiency, and I apply the same principles to system architecture: break the problem down, then build something well-structured enough to scale.</p>
+            <p>Outside of work, I'm into cooking, architecture and cars.</p>
+            <p>Progress often means questioning the status quo and being willing to say no when something isn't right. That's why this is one of my favorite quotes:</p>
+            <blockquote class="quote">
+              <p>The reasonable person adapts themselves to the world: the unreasonable person persists in trying to adapt the world to themselves. Therefore, all progress depends on the unreasonable person.</p>
+              <footer>Adapted from George Bernard Shaw</footer>
+            </blockquote>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-      <!-- END SKILLS SECTION -->
+    <!-- SKILLS -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="wrap section__grid">
+        <h2 class="section__title" id="skills-title">Skills</h2>
+        <div class="skills">
 
-      <!-- START EXPERIENCE SECTION -->
+          <div>
+            <h3 class="subhead">Integrations I've built</h3>
+            <dl class="leaders">
+              <div class="leaders__row" id="int-certinia">
+                <dt>Certinia PSA</dt>
+                <dd>Core implementation, PSA-to-supplier contract workflow, and dynamic hours allocation for assignment scheduling.</dd>
+              </div>
+              <div class="leaders__row" id="int-okta">
+                <dt>Okta</dt>
+                <dd>Custom REST integration that provisions, deactivates and assigns apps for 150+ contractors a year.</dd>
+              </div>
+              <div class="leaders__row" id="int-sage-intacct">
+                <dt>Sage Intacct</dt>
+                <dd>Moved custom logic into Flow with outbound posts to Azure middleware, cutting API calls by 80%.</dd>
+              </div>
+              <div class="leaders__row" id="int-slack">
+                <dt>Slack</dt>
+                <dd>Event-driven Service Cloud case notifications and the groundwork for cross-system alerts.</dd>
+              </div>
+              <div class="leaders__row" id="int-google-workspace">
+                <dt>Google Workspace</dt>
+                <dd>Project email distribution lists created and maintained automatically from active PSA projects.</dd>
+              </div>
+            </dl>
+          </div>
 
-      <hr id="experience">
-
-      <div class="row" >
-        <div class="col-md-2 col-sm-12">
-          <h3>Experience</h3>
-        </div>
-        <div class="col-md-9 col-sm-12 offset-md-1">
-          <div class="exp">
-            <div class="box">
-              <h4>Sr Business Application Architect</h4>
-              <h6>The Opus Group&emsp;&#8226;&emsp;Jun 2025 - Present</h6>
-              <ul>
-                <!-- No short items for bullets in this role -->
+          <div class="groups">
+            <div>
+              <h3 class="subhead">Salesforce platform</h3>
+              <ul class="tags">
+                <li>Sales Cloud</li>
+                <li>Service Cloud</li>
+                <li>Experience Cloud</li>
+                <li>Agentforce</li>
+                <li>Flow and Flow Orchestration</li>
+                <li>Apex</li>
+                <li>Lightning Web Components</li>
+                <li>Knowledge</li>
+                <li>Inventory Management</li>
+                <li>Permission set architecture</li>
               </ul>
-              <p>PSA–SMS Integration Workflow: Unified supplier resourcing, scheduling, and contracting into a single automated workflow across Salesforce apps, eliminating 10–30 manual steps per contract for users.</p>
-              <p>Automated Hours Distribution: Developed dynamic hours allocation logic for PSA assignment scheduling based on Region, Practice, and Group attributes, reducing schedule modification time by 90%.</p>
-              <p>Project Communication Automation: Integrated Google Workspace to auto-create and manage project email distribution lists based on PSA projects.</p>
             </div>
-            <div class="box">
-              <h4>Business Application Architect</h4>
-              <h6>The Opus Group&emsp;&#8226;&emsp;Apr 2024 - Jun 2025</h6>
-              <ul>
-                <li>PSA (Certinia) implementation</li>
-                <li>Custom Slack Integration</li>
+            <div>
+              <h3 class="subhead">Architecture and governance</h3>
+              <ul class="tags">
+                <li>Solution architecture</li>
+                <li>Data governance and standards</li>
+                <li>Requirements gathering</li>
+                <li>Business analysis</li>
+                <li>Technical design reviews</li>
+                <li>Admin mentorship</li>
               </ul>
-              <p>Salesforce–Sage Intacct Integration Update: Decreased API calls by 80% by migrating logic to Flows, improving maintainability and scalability.</p>
-              <p>Custom LWC Service Cloud Components: Streamlined internal case submissions and chat history access from the utility bar.</p>
-              <p>Custom Slack Integration: Created service cloud case notifications and laid the foundation for cross-system communication.</p>
             </div>
-            <div class="box">
-              <h4>Junior Salesforce Developer</h4>
-              <h6>The Opus Group&emsp;&#8226;&emsp;Jun 2022 - Apr 2024</h6>
-              <ul>
-                <li>Service Cloud implementation</li>
-                <li>Custom Experience Site Development</li>
+            <div>
+              <h3 class="subhead">DevOps and release</h3>
+              <ul class="tags">
+                <li>Gearset with Git</li>
+                <li>Copado</li>
+                <li>Flosum</li>
+                <li>Sandbox lifecycle</li>
+                <li>CI/CD strategy</li>
               </ul>
-              <p>Contractor Automation System: Reduced IT department spend by at least 15% annually by automating user creation, deactivation, and application assignments.</p>
-              <p>Salesforce–Okta Integration: Established the foundation for contractor automation and ensured seamless data syncing of personal info.</p>
             </div>
-            <div class="box">
-              <h4>Junior Salesforce Administrator</h4>
-              <h6>Opus Agency&emsp;&#8226;&emsp;Oct 2021 - May 2022</h6>
-              <ul></ul>
-              <p>Salesforce Org Audit & Optimization: Conducted a full audit of the Salesforce instance and modernized department systems to improve platform efficiency.</p>
-              <p>Flow Migration: Proactively converted all automations to Flows prior to Salesforce’s announcement, reducing technical debt.</p>
-            </div>
-            <div class="box">
-              <h4>Salesforce Lead Development Specialist</h4>
-              <h6>Work Truck Direct&emsp;&#8226;&emsp;2018</h6>
-              <p>The tasks that I had included: </p>
-              <ul>
-                <li>Salesforce database work and cleaning</li>
-                <li>Pardot campaign work and cleaning</li>
+            <div>
+              <h3 class="subhead">Languages</h3>
+              <ul class="tags">
+                <li>Apex</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>C#</li>
+                <li>HTML and CSS</li>
+                <li>SQL</li>
               </ul>
-              <p>While doing this job I was able to work at 3x the efficiency of their previous temps and interns. While providing helpful advice and information about the data that I collected.</p>
-            </div>
-            <div class="box">
-              <h4>Volunteer Assistant</h4>
-              <h6>Oregon Cat&emsp;&#8226;&emsp;2013 - 2014</h6>
-              <p>Oregon cat was a small cat shelter in the Lake Oswego, OR. My duties as Assistant/Volunteer were to complete any tasks that the owner had that day. These tasks included customer attendee, where I would answer questions or concerns that the customers had. Donation organizer, where I would take all the donations and divided them into groups to be used by the non-profit.</p>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- END EXPERIENCE SECTION -->
-
-      <!-- START EDUCATION SECTION -->
-
-      <hr id="education">
-
-      <div class="row">
-        <div class="col-md-2 col-sm-12">
-          <h3>Education</h3>
-        </div>
-        <div class="col-md-9 col-sm-12 offset-md-1">
-          <div class="box">
-            <h4>Oregon Institute of Technology</h4>
-            <h6>B.S. Information Technology&emsp;&#8226;&emsp;2022&emsp;&#8226;&emsp;3.8 GPA</h6>
-            <p>Python Programming, C# Programming, Intro to Relational Databases, Relational Database I, Database programming, Fundamentals of Linux, Windows Server Fundamentals, Networking Fundamentals, Intro to PC Hardware/Software, Intro to Systems Analysis, Systems Analysis I, Engineering Management, Marketing 1, Argumentative writing, Public Speaking, Business Law, Principles of Accounting I, Project Management, Advanced Technical Writing.</p>
-          </div>
-
-          <div class="box">
-            <h4>Central Oregon Community College</h4>
-            <h6>Transfer Degree&emsp;&#8226;&emsp;2019</h6>
-            <p>At COCC I have completed Business 1, Microeconomics, Macroeconomics, Technical Writing, Intro to Computer Science, and Computer Concepts, Adobe Illustrator, Photoshop.</p>
-          </div>
-
-          <div class="box">
-            <h4>LakeRidge Highschool</h4>
-            <h6>Highschool Diploma&emsp;&#8226;&emsp;2016</h6>
-            <p>At Lakeridge I completed Intro to Marketing, Marketing 1 & 2, Theatre Tech, Intro to Programming, and Programming Projects.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- START CERTIFICATIONS SECTION -->
-
-      <hr id="LWC">
-
-      <div class="row">
-        <div class="col-md-2 col-sm-12">
-          <h3>LWC</h3>
-        </div>
-        <div class="col-md-9 col-sm-12 offset-md-1">
-
-          <div class="box">
-            <h4>Scheduled Maintenance Component</h4>
-            <p>The ScheduledMaintenanceComponent is a Salesforce Lightning Web Component (LWC) designed to manage and display scheduled maintenance alerts within a Salesforce ORG. It leverages the Scheduled_Maintenance__c object to retrieve and display relevant maintenance records based on their field values directly to the use on page view.</p>
-            <h6>&emsp;<a href="https://github.com/edunzer/ScheduledMaintenanceComponent" target="_blank" rel="noopener noreferrer" style="color:#4d963c">Git Repository</a></h6>
-          </div>
-
-          <div class="box">
-            <h4>Idea Management Components</h4>
-            <p>The Idea Management components (IdeaListViewComponent and IdeaVoteComponent) are Salesforce Lightning Web Components (LWCs) designed to manage and interact with ideas within a Salesforce ORG. These components allow users to view, upvote, and downvote ideas, providing a dynamic and interactive way to engage with idea records. They leverage a combination of Apex controllers and custom Lightning Web Components to deliver efficient functionality..</p>
-            <h6>&emsp;<a href="https://github.com/edunzer/IdeaMangementComponent" target="_blank" rel="noopener noreferrer" style="color:#4d963c">Git Repository</a></h6>
-          </div>
-
-          <div class="box">
-            <h4>Work Management Components</h4>
-            <p>The Work Management Components are a set of Salesforce Lightning Web Components (LWCs) designed to manage and display work records and associated action items for users within a Salesforce ORG. These components leverage custom objects to retrieve and display relevant data based on the current user's context and interactions with the system.</p>
-            <h6>&emsp;<a href="https://github.com/edunzer/WorkManagementComponent" target="_blank" rel="noopener noreferrer" style="color:#4d963c">Git Repository</a></h6>
-          </div>
-
-          
 
         </div>
       </div>
+    </section>
 
-      <!-- END CERTIFICATIONS SECTION -->
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap section__grid">
+        <h2 class="section__title" id="experience-title">Experience</h2>
+        <ol class="timeline">
 
-    </div>
-  </div>
+          <!-- TODO: add start date and a few highlights from LinkedIn -->
+          <li class="role role--current">
+            <p class="role__when">Current</p>
+            <div class="role__body">
+              <h3 class="role__title">Solution Architect</h3>
+              <p class="role__org"><a href="https://www.lovalto.com/" target="_blank" rel="noopener noreferrer">LOVALTO</a></p>
+              <p>Salesforce consulting and architecture. I scope client work and then build it, across Agentforce, Flow, Apex and Lightning Web Components.</p>
+            </div>
+          </li>
 
-  <!-- START PROJECTS SECTION -->
+          <li class="role">
+            <p class="role__when">Jun 2025 – Sep 2026</p>
+            <div class="role__body">
+              <h3 class="role__title">Sr Business Application Architect</h3>
+              <p class="role__org"><a href="https://www.theopusgroup.com/" target="_blank" rel="noopener noreferrer">The Opus Group</a></p>
+              <p>Lead architect for a 700+ user multi-cloud Salesforce platform, owning governance, major rollouts and cross-application strategy.</p>
+              <ul>
+                <li><strong>Supplier contract workflow.</strong> Unified supplier resourcing, scheduling and contracting into one automated pipeline across Salesforce apps, removing 10–30 manual steps per contract across 3,000 contracts a year.</li>
+                <li><strong>Hours allocation.</strong> Built dynamic allocation logic for PSA assignment scheduling by region, practice and group, cutting schedule changes by 90%.</li>
+                <li><strong>Certinia expansion.</strong> Primary architect for rollouts adding the Financial Services and Services Estimator modules.</li>
+                <li><strong>Governance and DevOps.</strong> Set data governance standards across Salesforce and Okta, mentored junior admins, and ran release management in Gearset backed by Git.</li>
+                <li><strong>Google Workspace.</strong> Automated project email distribution lists from active PSA projects.</li>
+              </ul>
+            </div>
+          </li>
 
-  <div class="container-fluid" id="educationwork">
-    <h2>Education Work</h2>
-    <div class="container">
-      <div class="row">
+          <li class="role">
+            <p class="role__when">Apr 2024 – Jun 2025</p>
+            <div class="role__body">
+              <h3 class="role__title">Business Application Architect</h3>
+              <p class="role__org"><a href="https://www.theopusgroup.com/" target="_blank" rel="noopener noreferrer">The Opus Group</a></p>
+              <ul>
+                <li><strong>Certinia PSA implementation.</strong> Primary internal architect leading external contractor teams through the core rollout, unifying project tracking and resource management across business units.</li>
+                <li><strong>Sage Intacct integration.</strong> Refactored custom logic into Flow and moved outbound posts to Azure middleware, cutting API call volume by 80%.</li>
+                <li><strong>Service Cloud components.</strong> Built LWC utility-bar components for internal case submission and live chat history.</li>
+                <li><strong>Slack integration.</strong> Automated Service Cloud case notifications in Slack, laying the foundation for cross-system alerts.</li>
+              </ul>
+            </div>
+          </li>
 
-        <div class="col-lg-4 col-md-6 col-xs-12">
-          <img src="https://github.com/edunzer/ethandunzer.github.io/blob/master/img/c%23projects.png?raw=true">
-          <a href="https://github.com/edunzer/MIS218_DATABASE_PROGRAMMING" target="_blank" rel="noopener noreferrer">
-          <div class="overlay">
-            <h3 class="project-title">C# Projects</h3>
-          </div>
-          </a>
-        </div>
+          <li class="role">
+            <p class="role__when">Jun 2022 – Apr 2024</p>
+            <div class="role__body">
+              <h3 class="role__title">Junior Salesforce Developer</h3>
+              <p class="role__org"><a href="https://www.theopusgroup.com/" target="_blank" rel="noopener noreferrer">The Opus Group</a></p>
+              <ul>
+                <li><strong>Contractor automation.</strong> Custom REST integration between Salesforce and Okta that automates provisioning, deactivation and app assignment for 150+ users a year, reducing annual IT spend by 15%.</li>
+                <li><strong>Service and Experience Cloud.</strong> Implemented Service Cloud and custom Experience Cloud portals for internal ticketing and external users.</li>
+              </ul>
+            </div>
+          </li>
 
-        <div class="col-lg-4 col-md-6 col-xs-12">
-          <img src="https://github.com/edunzer/ethandunzer.github.io/blob/master/img/sqlprojects.png?raw=true">
-          <a href="https://github.com/edunzer/MIS341_RELATIONAL_DATABASE_I" target="_blank" rel="noopener noreferrer">
-          <div class="overlay">
-            <h3 class="project-title">SQL Projects</h3>
-          </div>
-          </a>
-        </div>
+          <li class="role">
+            <p class="role__when">Oct 2021 – May 2022</p>
+            <div class="role__body">
+              <h3 class="role__title">Junior Salesforce Administrator</h3>
+              <p class="role__org"><a href="https://www.opusagency.com/" target="_blank" rel="noopener noreferrer">Opus Agency</a></p>
+              <ul>
+                <li><strong>Org audit.</strong> Audited the primary Salesforce org, identified technical debt and modernized department configurations.</li>
+                <li><strong>Flow migration.</strong> Moved Workflow Rules and Process Builders to Flow ahead of Salesforce's retirement schedule.</li>
+              </ul>
+            </div>
+          </li>
 
-        <div class="col-lg-4 col-md-6 col-xs-12">
-          <img src="https://github.com/edunzer/ethandunzer.github.io/blob/master/img/pythonprojects.png?raw=true">
-          <a href="https://github.com/edunzer/MIS285_PYTHON_PROGRAMMING" target="_blank" rel="noopener noreferrer">
-          <div class="overlay">
-            <h3 class="project-title">Python Projects</h3>
-          </div>
-          </a>
-        </div>
+          <li class="role">
+            <p class="role__when">Jan 2018 – Aug 2018</p>
+            <div class="role__body">
+              <h3 class="role__title">Salesforce Database Specialist</h3>
+              <p class="role__org"><a href="https://worktruckdirect.com/" target="_blank" rel="noopener noreferrer">Work Truck Direct</a></p>
+              <p>Cleaned and maintained Salesforce data and restructured Pardot campaigns for better deliverability and prospect tracking, working at 3x the pace of previous temp and intern teams.</p>
+            </div>
+          </li>
 
-        <div class="col-lg-4 col-md-6 col-xs-12">
-          <img src="https://github.com/edunzer/ethandunzer.github.io/blob/master/img/technicalwriting.png?raw=true">
-          <a href="https://github.com/edunzer/WRI327_ADVANCED_TECHNICAL_WRITING" target="_blank" rel="noopener noreferrer">
-          <div class="overlay">
-            <h3 class="project-title">Technical Writing</h3>
-          </div>
-          </a>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-xs-12">
-          <img src="https://github.com/edunzer/ethandunzer.github.io/blob/master/img/systemsanalysis.png?raw=true">
-          <a href="https://github.com/edunzer/MIS312_SYSTEMS_ANALYSIS_I" target="_blank" rel="noopener noreferrer">
-          <div class="overlay">
-            <h3 class="project-title">System Analysis Projects</h3>
-          </div>
-          </a>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-xs-12">
-          <img src="https://github.com/edunzer/ethandunzer.github.io/blob/master/img/marketingprojects.png?raw=true">
-          <a href="https://github.com/edunzer/BUS223_MARKETING_I" target="_blank" rel="noopener noreferrer">
-          <div class="overlay">
-            <h3 class="project-title">Marketing Projects</h3>
-          </div>
-          </a>
-        </div>
-
+        </ol>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- END PROJECTS SECTION -->
-
-  <!-- START CONTACT SECTION -->
-
-  <div class="container-fluid" id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 offset-lg-1">
-          <h4>Wanna talk?</h4>
-          <div class="col-lg-16 left" id="second-arrow">
-            <a href="#footer"><span><i class="fa fa-angle-double-down fa-3x bounce" aria-hidden="true"></i></span></a>
-          </div>
+    <!-- EDUCATION -->
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="wrap section__grid">
+        <h2 class="section__title" id="education-title">Education</h2>
+        <div class="entries">
+          <article class="entry">
+            <h3>Oregon Institute of Technology</h3>
+            <p class="entry__meta">B.S. Information Technology, 2022, 3.8 GPA</p>
+            <p>Database programming, relational databases, Python and C# programming, systems analysis, Linux and Windows Server, networking, project management, engineering management, business law, accounting, public speaking and advanced technical writing.</p>
+          </article>
+          <article class="entry">
+            <h3>Central Oregon Community College</h3>
+            <p class="entry__meta">Transfer degree, 2019</p>
+            <p>Business, microeconomics, macroeconomics, technical writing, computer science, Adobe Illustrator and Photoshop.</p>
+          </article>
+          <article class="entry">
+            <h3>Lakeridge High School</h3>
+            <p class="entry__meta">Diploma, 2016</p>
+            <p>Marketing, programming and theatre tech.</p>
+          </article>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- END CONTACT SECTION -->
+    <!-- PROJECTS -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap section__grid">
+        <h2 class="section__title" id="projects-title">Projects</h2>
+        <div class="projects">
 
-  <!-- START FOOTER SECTION -->
+          <div>
+            <h3 class="subhead">Lightning Web Components</h3>
+            <div class="cards">
+              <article class="card">
+                <h4>Scheduled Maintenance</h4>
+                <p>Shows maintenance alerts to users when a page loads, driven by records on a custom Scheduled_Maintenance__c object.</p>
+                <a href="https://github.com/edunzer/ScheduledMaintenanceComponent" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+              </article>
+              <article class="card">
+                <h4>Idea Management</h4>
+                <p>List view and voting components that let users browse, upvote and downvote idea records, backed by Apex controllers.</p>
+                <a href="https://github.com/edunzer/IdeaMangementComponent" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+              </article>
+              <article class="card">
+                <h4>Work Management</h4>
+                <p>Displays work records and their action items based on the current user's context, built on custom objects.</p>
+                <a href="https://github.com/edunzer/WorkManagementComponent" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+              </article>
+            </div>
+          </div>
 
-  <footer>
-    <div class="footer-content" id="footer">
+          <div>
+            <h3 class="subhead">Coursework</h3>
+            <ul class="coursework">
+              <li><a href="https://github.com/edunzer/MIS218_DATABASE_PROGRAMMING" target="_blank" rel="noopener noreferrer">C# projects<span>MIS 218, Database Programming</span></a></li>
+              <li><a href="https://github.com/edunzer/MIS341_RELATIONAL_DATABASE_I" target="_blank" rel="noopener noreferrer">SQL projects<span>MIS 341, Relational Database I</span></a></li>
+              <li><a href="https://github.com/edunzer/MIS285_PYTHON_PROGRAMMING" target="_blank" rel="noopener noreferrer">Python projects<span>MIS 285, Python Programming</span></a></li>
+              <li><a href="https://github.com/edunzer/MIS312_SYSTEMS_ANALYSIS_I" target="_blank" rel="noopener noreferrer">Systems analysis<span>MIS 312, Systems Analysis I</span></a></li>
+              <li><a href="https://github.com/edunzer/WRI327_ADVANCED_TECHNICAL_WRITING" target="_blank" rel="noopener noreferrer">Technical writing<span>WRI 327, Advanced Technical Writing</span></a></li>
+              <li><a href="https://github.com/edunzer/BUS223_MARKETING_I" target="_blank" rel="noopener noreferrer">Marketing projects<span>BUS 223, Marketing I</span></a></li>
+            </ul>
+          </div>
 
-      <div>
-        <h4>Email</h4>
-        <a href="mailto:ethandunzer@yahoo.com" target="_blank">
-        <p>ethandunzer@gmail.com</p>
-        </a>
+        </div>
       </div>
+    </section>
 
-      <div>
-        <h4>Social</h4>
-        <a href="https://www.linkedin.com/in/ethan-dunzer/" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://github.com/edunzer" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github"></i>
-        </a>
-
+    <!-- CONTACT -->
+    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap section__grid">
+        <h2 class="section__title" id="contact-title">Contact</h2>
+        <div class="contact">
+          <p class="contact__lead">Let's build something that holds up.</p>
+          <p>I'm based in Portland, Oregon. Email is the fastest way to reach me.</p>
+          <dl class="leaders">
+            <div class="leaders__row">
+              <dt>Email</dt>
+              <dd><a href="mailto:ethandunzer@gmail.com">ethandunzer@gmail.com</a></dd>
+            </div>
+            <div class="leaders__row">
+              <dt>LinkedIn</dt>
+              <dd><a href="https://www.linkedin.com/in/ethan-dunzer-salesforce/" target="_blank" rel="noopener noreferrer">ethan-dunzer-salesforce</a></dd>
+            </div>
+            <div class="leaders__row">
+              <dt>GitHub</dt>
+              <dd><a href="https://github.com/edunzer" target="_blank" rel="noopener noreferrer">edunzer</a></dd>
+            </div>
+            <div class="leaders__row">
+              <dt>Resume</dt>
+              <dd><a href="https://github.com/edunzer/CURRENT_RESUME/raw/main/Resume%204.4.0.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a></dd>
+            </div>
+          </dl>
+        </div>
       </div>
+    </section>
 
-      <div id="download">
-        <h4>Resume</h4>
-        <a href="https://github.com/edunzer/CURRENT_RESUME/raw/main/Resume%204.4.0.pdf" target="_blank" rel="noopener noreferrer">
-        <p>Download</p>
-        </a>
-      </div>
+  </main>
 
-      <div>
-        <h4>Location</h4>
-        <a href="https://www.google.com/maps/@45.4993104,-122.6602736,11.71z" target="_blank" rel="noopener noreferrer">
-        <p>Portland OR</p>
-        </a>
-      </div>
-
-    </div>
-    <div class="bottom-footer">
-        <p>© Created by <a href="https://linktr.ee/ethandunzer" target="_blank" rel="noopener noreferrer" style="color:#4d963c">Ethan Dunzer</a></p>
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <p>© <span id="year">2026</span> Ethan Dunzer</p>
+      <p><a href="https://linktr.ee/ethandunzer" target="_blank" rel="noopener noreferrer">All my links</a></p>
     </div>
   </footer>
 
-  <!-- END FOOTER SECTION -->
-
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
-  <script  src="./script.js"></script>
+  <script src="script.js" defer></script>
 </body>
-<!-- partial -->
-
 </html>
