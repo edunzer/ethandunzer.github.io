@@ -170,12 +170,18 @@ a {
   border-bottom-color: var(--blue);
 }
 
+/* full-size tap targets on touch tablets, where the inline nav still shows */
+@media (pointer: coarse) {
+  .nav__links a { padding-block: 0.625rem; }
+}
+
 .nav__toggle { display: none; }
 
 @media (max-width: 47.99rem) {
   .js .nav__toggle {
     display: inline-flex;
     align-items: center;
+    min-height: 2.75rem;
     padding: 0.4rem 0.9rem;
     background: transparent;
     border: 1px solid var(--line);
@@ -1060,6 +1066,10 @@ a {
 }
 
 .contact .leaders { margin-top: 2rem; }
+
+/* the whole row is the tap target, not just the link text */
+.contact .leaders__row { position: relative; }
+.contact .leaders dd a::after { content: ""; position: absolute; inset: 0; }
 
 /* ---------- Footer ---------- */
 
