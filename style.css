@@ -523,8 +523,8 @@ a:hover { color: #a3d0fc; }
 
 .hero__base { padding-bottom: 0.75rem; }
 
-/* lets a finger drag the load sideways without blocking vertical scroll */
-.hero { touch-action: pan-y; }
+/* lets a finger drag the load sideways without blocking vertical scroll or pinch-zoom */
+.hero__base { touch-action: pan-y pinch-zoom; }
 
 .truss {
   display: block;

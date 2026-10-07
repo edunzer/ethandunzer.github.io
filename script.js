@@ -204,8 +204,9 @@
       if (e.pointerType === 'mouse') each(function (t) { t.aim(e.clientX, e.clientY); });
       else if (touching) each(function (t) { t.aim(e.clientX, e.clientY, 1); });
     });
+    // touch only loads the bridge when the finger lands on it, not on the buttons above
     hero.addEventListener('pointerdown', function (e) {
-      if (!ready || e.pointerType === 'mouse') return;
+      if (!ready || e.pointerType === 'mouse' || !e.target.closest('.hero__base')) return;
       touching = true;
       each(function (t) { t.aim(e.clientX, e.clientY, 1); });
     });
