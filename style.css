@@ -74,7 +74,9 @@ a {
   text-decoration-thickness: 1px;
   text-underline-offset: 0.22em;
 }
-a:hover { color: #a3d0fc; }
+@media (hover: hover) {
+  a:hover { color: #a3d0fc; }
+}
 
 :focus-visible {
   outline: 2px solid var(--blue);
@@ -141,7 +143,9 @@ a:hover { color: #a3d0fc; }
   font-weight: 600;
   text-decoration: none;
 }
-.nav__name:hover { color: var(--text); }
+@media (hover: hover) {
+  .nav__name:hover { color: var(--text); }
+}
 
 .nav__links {
   list-style: none;
@@ -158,10 +162,17 @@ a:hover { color: #a3d0fc; }
   font-size: 0.9375rem;
   text-decoration: none;
 }
-.nav__links a:hover { color: var(--text); }
+@media (hover: hover) {
+  .nav__links a:hover { color: var(--text); }
+}
 .nav__links a[aria-current="true"] {
   color: var(--text);
   border-bottom-color: var(--blue);
+}
+
+/* full-size tap targets on touch tablets, where the inline nav still shows */
+@media (pointer: coarse) {
+  .nav__links a { padding-block: 0.625rem; }
 }
 
 .nav__toggle { display: none; }
@@ -170,6 +181,7 @@ a:hover { color: #a3d0fc; }
   .js .nav__toggle {
     display: inline-flex;
     align-items: center;
+    min-height: 2.75rem;
     padding: 0.4rem 0.9rem;
     background: transparent;
     border: 1px solid var(--line);
@@ -209,17 +221,21 @@ a:hover { color: #a3d0fc; }
   text-decoration: none;
   transition: border-color 0.2s, background-color 0.2s, color 0.2s;
 }
-.btn:hover { border-color: var(--text); color: var(--text); }
-
 .btn--primary {
   border-color: var(--blue);
   background: var(--blue);
   color: var(--blue-ink);
 }
-.btn--primary:hover {
-  border-color: #a3d0fc;
-  background: #a3d0fc;
-  color: var(--blue-ink);
+
+/* Hover styles are kept to devices with a real pointer throughout,
+   so a tap on a phone doesn't leave them stuck on */
+@media (hover: hover) {
+  .btn:hover { border-color: var(--text); color: var(--text); }
+  .btn--primary:hover {
+    border-color: #a3d0fc;
+    background: #a3d0fc;
+    color: var(--blue-ink);
+  }
 }
 
 /* ==========================================================================
@@ -264,7 +280,7 @@ a:hover { color: #a3d0fc; }
 .dimension {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: clamp(0.75rem, 3vw, 1rem);
   max-width: 37rem;
   margin: 1.75rem 0 1.25rem;
   color: var(--text);
@@ -273,12 +289,17 @@ a:hover { color: #a3d0fc; }
   line-height: 1.3;
 }
 
-.dimension__label { flex: none; }
+/* may wrap on the narrowest phones rather than push an arm off-screen */
+.dimension__label {
+  flex: 0 1 auto;
+  text-align: center;
+  text-wrap: balance;
+}
 
 .dimension__arm {
   position: relative;
   flex: 1;
-  min-width: 2rem;
+  min-width: 1rem;
   height: 1.75rem;
   background: linear-gradient(var(--line), var(--line)) center / 100% 1px no-repeat;
 }
@@ -469,31 +490,45 @@ a:hover { color: #a3d0fc; }
   transition: border-color 0.2s;
 }
 
-/* hovering an integration lights its path back to Salesforce */
-.integrations li:hover,
-.integrations li:focus-within {
+/* hovering or tabbing to an integration lights its path back to Salesforce
+   (focus-visible, since a tap on Android focuses the link and would stick) */
+.integrations li:has(a:focus-visible) {
   border-color: var(--blue);
   background: rgba(112, 181, 249, 0.1);
 }
-.integrations li:hover::before,
-.integrations li:focus-within::before {
+.integrations li:has(a:focus-visible)::before {
   transform: scale(1.35);
   box-shadow: 0 0 0 4px var(--blue-soft);
 }
-.integrations li:hover::after,
-.integrations li:focus-within::after {
+.integrations li:has(a:focus-visible)::after {
   border-top-style: solid;
   border-top-color: var(--blue);
+}
+
+@media (hover: hover) {
+  .integrations li:hover {
+    border-color: var(--blue);
+    background: rgba(112, 181, 249, 0.1);
+  }
+  .integrations li:hover::before {
+    transform: scale(1.35);
+    box-shadow: 0 0 0 4px var(--blue-soft);
+  }
+  .integrations li:hover::after {
+    border-top-style: solid;
+    border-top-color: var(--blue);
+  }
 }
 
 .layer--core,
 .layer__link { transition: box-shadow 0.25s, background-color 0.25s; }
 
-.stack:has(.integrations li:hover, .integrations li:focus-within) .layer--core {
-  box-shadow: 0 0 0 5px var(--blue-soft);
-}
-.stack:has(.integrations li:hover, .integrations li:focus-within) .layer__link {
-  background: var(--blue);
+.stack:has(.integrations a:focus-visible) .layer--core { box-shadow: 0 0 0 5px var(--blue-soft); }
+.stack:has(.integrations a:focus-visible) .layer__link { background: var(--blue); }
+
+@media (hover: hover) {
+  .stack:has(.integrations li:hover) .layer--core { box-shadow: 0 0 0 5px var(--blue-soft); }
+  .stack:has(.integrations li:hover) .layer__link { background: var(--blue); }
 }
 
 /* the packet that travels from Salesforce to the hovered integration */
@@ -512,19 +547,37 @@ a:hover { color: #a3d0fc; }
 }
 
 @media (max-width: 39.99rem) {
+  .hero__inner { gap: 2.5rem; }
+
   .stack {
+    --row: 2.5rem;
     grid-template-columns: minmax(0, 1fr);
     row-gap: 1.5rem;
   }
   .layer__link { display: none; }
+  .layer--core { min-height: 3.25rem; font-size: 1.25rem; }
+
+  /* integrations sit in a 2x2 grid under the stack; the bus only reads beside it,
+     so each node moves inside its box */
+  .integrations {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-left: 0;
+  }
+  .integrations::before,
+  .integrations li::after { display: none; }
+  .integrations li::before { left: 0.75rem; }
+  .integrations a {
+    padding: 0.5rem 0.75rem 0.5rem 1.75rem;
+    white-space: normal;
+  }
 }
 
 /* ---------- Truss ---------- */
 
 .hero__base { padding-bottom: 0.75rem; }
 
-/* lets a finger drag the load sideways without blocking vertical scroll */
-.hero { touch-action: pan-y; }
+/* lets a finger drag the load sideways without blocking vertical scroll or pinch-zoom */
+.hero__base { touch-action: pan-y pinch-zoom; }
 
 .truss {
   display: block;
@@ -714,8 +767,14 @@ a:hover { color: #a3d0fc; }
   /* connections draw in when the list scrolls into view */
   .js .leaders:not(.is-drawn) dt::after { transform: translateY(0.1em) scaleX(0); }
 
-  .leaders__row:hover dt::after,
   .leaders__row:target dt::after {
+    border-top-style: solid;
+    border-top-color: var(--blue);
+  }
+}
+
+@media (min-width: 40rem) and (hover: hover) {
+  .leaders__row:hover dt::after {
     border-top-style: solid;
     border-top-color: var(--blue);
   }
@@ -847,8 +906,10 @@ a:hover { color: #a3d0fc; }
   font-weight: 500;
 }
 .role__org a { text-decoration-color: transparent; transition: text-decoration-color 0.2s; }
-.role__org a:hover,
 .role__org a:focus-visible { text-decoration-color: currentColor; }
+@media (hover: hover) {
+  .role__org a:hover { text-decoration-color: currentColor; }
+}
 
 .role ul {
   display: grid;
@@ -913,7 +974,9 @@ a:hover { color: #a3d0fc; }
 .card a { margin-top: auto; font-weight: 500; }
 /* the whole card is clickable */
 .card a::after { content: ""; position: absolute; inset: 0; }
-.card:hover { border-color: var(--line); }
+@media (hover: hover) {
+  .card:hover { border-color: var(--line); }
+}
 
 .coursework {
   list-style: none;
@@ -933,7 +996,9 @@ a:hover { color: #a3d0fc; }
   text-decoration: none;
   transition: border-color 0.2s;
 }
-.coursework a:hover { border-color: var(--blue); color: var(--text); }
+@media (hover: hover) {
+  .coursework a:hover { border-color: var(--blue); color: var(--text); }
+}
 
 .coursework span {
   display: block;
@@ -969,13 +1034,19 @@ a:hover { color: #a3d0fc; }
   transition: inset 0.3s cubic-bezier(0.3, 0, 0.2, 1), opacity 0.2s;
 }
 
-.card:hover::before,
-.card:focus-within::before,
-.coursework a:hover::before,
-.coursework a:focus-visible::before,
-.portrait:hover::before {
+.card:has(a:focus-visible)::before,
+.coursework a:focus-visible::before {
   inset: -9px;
   opacity: 1;
+}
+
+@media (hover: hover) {
+  .card:hover::before,
+  .coursework a:hover::before,
+  .portrait:hover::before {
+    inset: -9px;
+    opacity: 1;
+  }
 }
 
 .portrait { position: relative; }
@@ -995,6 +1066,10 @@ a:hover { color: #a3d0fc; }
 }
 
 .contact .leaders { margin-top: 2rem; }
+
+/* the whole row is the tap target, not just the link text */
+.contact .leaders__row { position: relative; }
+.contact .leaders dd a::after { content: ""; position: absolute; inset: 0; }
 
 /* ---------- Footer ---------- */
 
