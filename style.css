@@ -678,7 +678,7 @@ a {
     grid-template-columns: minmax(0, 1fr) 15rem;
     align-items: start;
   }
-  .portrait { order: 2; }
+  .about .portrait { order: 2; }
 }
 
 .portrait {
@@ -1011,6 +1011,7 @@ a {
 /* Drafting crop marks that spread out from the corners on hover */
 .card::before,
 .coursework a::before,
+.link-list a::before,
 .portrait::before {
   --c: var(--blue);
   --s: 14px;
@@ -1035,7 +1036,8 @@ a {
 }
 
 .card:has(a:focus-visible)::before,
-.coursework a:focus-visible::before {
+.coursework a:focus-visible::before,
+.link-list a:focus-visible::before {
   inset: -9px;
   opacity: 1;
 }
@@ -1043,6 +1045,7 @@ a {
 @media (hover: hover) {
   .card:hover::before,
   .coursework a:hover::before,
+  .link-list a:hover::before,
   .portrait:hover::before {
     inset: -9px;
     opacity: 1;
